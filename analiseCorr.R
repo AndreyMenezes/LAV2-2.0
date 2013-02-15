@@ -30,9 +30,13 @@ ad.test(data_sum$sumSession)
 shapiro.test(data_sum$sumSession)
 
 png(filename = "cor-temposessoes.png", width=650)
-plot(data_all$nota.final.teoria, (data_sum$sumSession/3600), log="xy", xlab = "Nota na disciplina", ylab = "Tamanho das sessões", las = 1)
+plot(data_all$nota.final.teoria, 
+	(data_sum$sumSession/3600), 
+	log="xy", xlab = "Nota na disciplina", ylab = "Tempo total de Estudo", 
+	las = 1, col=c("darkorange3","brown1","cornflowerblue","aquamarine3","black")[data_all$status],
+	pch=19)
 dev.off()
 
 data_all = data_all[with(data_all, order(matricula)), ]
 data_sum = data_sum[with(data_sum, order(matricula)), ]
-cor.test(data_mean$sumSession, data_all$nota.final.pratica, method="spearman")
+cor.test(data_sum$sumSession, data_all$nota.final.pratica, method="spearman")

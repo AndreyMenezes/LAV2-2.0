@@ -2,12 +2,12 @@
 #Tamanho Sessões x Notas Prova 1,2,3.
 require(nortest)
 
-sessoes <- read.csv("tableMeanPerTest.csv")
-geral <- read.csv("Geral.csv")
-sessoes$meanSessions <- sessoes$meanSessions/3600
-sessao1 <- subset(sessoes,Prova == "Prova1",select=c(matricula,meanSessions))
-sessao2 <- subset(sessoes,Prova != "Prova3",select=c(matricula,meanSessions))
-sessao3 <- subset(sessoes,Prova != "",select=c(matricula,meanSessions))
+sessoes <- read.csv("dados/tableSumPerTest.csv")
+geral <- read.csv("dados/Geral.csv")
+sessoes$sumSessions <- sessoes$sumSessions/3600
+sessao1 <- subset(sessoes,Prova == "Prova1",select=c(matricula,sumSessions))
+sessao2 <- subset(sessoes,Prova != "Prova3",select=c(matricula,sumSessions))
+sessao3 <- subset(sessoes,Prova != "",select=c(matricula,sumSessions))
 
 p1 <- subset(geral, prova1 >= 0 & status != "#VALUE!", select=c(matricula,prova1))
 p2 <- subset(geral, prova2 >= 0 & status != "#VALUE!", select=c(matricula,prova2) )
@@ -22,10 +22,10 @@ sessoes.prova3 <- merge(sessao3,p3,by.x="matricula",by.y="matricula")
 colnames(sessoes.prova3) <- c("matricula", "tamanhoSessao", "nota.prova3")
 
 #acumulada
-tabela2 = with(sessao2, aggregate(meanSessions, list(matricula), FUN=sum))
-colnames(tabela2) <- c("matricula","somaSessao")
-tabela3 = with(sessoes,aggregate(meanSessions,list(matricula),FUN=sum))
-colnames(tabela3) <- c("matricula","somaSessao")
+tabela2 = with(sessao2, aggregate(sumSessions, list(matricula), FUN=sum))
+colnames(tabela2) <- c("matricula","sumSessao")
+tabela3 = with(sessoes,aggregate(sumSessions,list(matricula),FUN=sum))
+colnames(tabela3) <- c("matricula","sumSessao")
 
 
 #data frame para acumulada
@@ -51,7 +51,6 @@ qqline(sessoes.acm3$tamanhoSessaoAcm)
 dev.off()
 
 #Sessoes x Prova1
-
 png(filename = "TamanhoSessoesProva1.png", width=650)
 par(mfrow=c(1,2))
 hist(sessoes.prova1$tamanhoSessao, main="Histograma Tamanho Sessoes", xlab="Tamanho Sessoes", ylab="Frequencia")
@@ -97,8 +96,6 @@ hist(sessoes.prova3$nota.prova3, main="Histograma notas prova3", xlab="Notas pro
 qqnorm(sessoes.prova3$nota.prova3)
 qqline(sessoes.prova3$nota.prova3)
 dev.off()
-
-
 
 
 
