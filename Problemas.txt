@@ -1,0 +1,7 @@
+Erros nos arquivos:
+
+	Notas em colunas erradas, problemas com vírgula. Como corrigir?
+	Padronizar o formato da nota (utiliza "." ou ","), ou aceitar os dois?
+	Tabelas com acentuação gerando problemas.
+
+Reorganizar automatização

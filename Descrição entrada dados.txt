@@ -1,0 +1,14 @@
+Dados utilizados pelo sistema LA 2.0
+
+As notas devem utilizar a notação de ponto para separar a parte inteira da decimal.
+
+Geral.csv
+	Contém as colunas: matricula, status, turma.teoria, turma.pratica, nota.final.teoria, nota.final.pratica,
+	prova.final, media.parcial.teoria, media.parcial.pratica, nota.listas, exercicios.resolvidos, media.provas,
+	prova1, prova2, prova3.ou.projeto, media.MTP, media.MTT, MT1, MT2, MT3, MT4, MT5, MT6, MT7, MT8, MT9, MT10.
+
+Exercicios.csv
+	Contém as colunas: matricula, numero da questão, turma, timestamp, testes, nota.
+
+Um arquivo para cada prova realizada, os arquivos devem estar no formato Prova1.csv, Prova2.csv e etc.
+	Contém as colunas: turma.teoria, turma.pratica, matricula, nota, nota em cada questão (uma por coluna)
