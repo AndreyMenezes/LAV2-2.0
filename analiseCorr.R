@@ -6,7 +6,7 @@ data_all = read.csv("dados/Geral.csv")
 
 data_all = subset(data_all, turma.pratica != 5)
 
-intersect = intersect(data_all$matricula, data_mean$matricula)
+intersect = intersect(data_all$matricula, data_sum$matricula)
 data_sum = subset(data_sum, matricula%in%intersect)
 data_all = subset(data_all, matricula%in%intersect)
 
@@ -30,11 +30,13 @@ ad.test(data_sum$sumSession)
 shapiro.test(data_sum$sumSession)
 
 png(filename = "cor-temposessoes.png", width=650)
-plot(data_all$nota.final.teoria, 
+plot(data_all$nota.final.teoria,
 	(data_sum$sumSession/3600), 
 	log="xy", xlab = "Nota na disciplina", ylab = "Tempo total de Estudo", 
 	las = 1, col=c("darkorange3","brown1","cornflowerblue","aquamarine3","black")[data_all$status],
 	pch=19)
+
+legend("topleft", legend = c("aprovado na final", "aprovado por média", "reprovado na final", "reprovado por média"), pch=19, col=c("brown1","cornflowerblue","aquamarine3","black"))
 dev.off()
 
 data_all = data_all[with(data_all, order(matricula)), ]
