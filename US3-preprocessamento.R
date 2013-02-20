@@ -1,4 +1,4 @@
-dados <- read.csv("exercicios-20112.csv",header=F,stringsAsFactors=F)
+dados <- read.csv("dados/exercicios-20112.csv",header=F,stringsAsFactors=F)
 dados.pre <- dados[,c(1,4)]
 dados.pre$dh <- strptime(dados.pre[,2],"%m/%d/%Y %H:%M:%S")
 dados.pre$timestamp <- as.numeric(as.POSIXct(dados.pre[,3],origin="1970-01-01"))
