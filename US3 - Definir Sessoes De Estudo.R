@@ -1,50 +1,55 @@
-# Codigo que cria as tabelas dos agrupamentos dos dados
+# Codigo que cria 3 tabelas, tableSessionLength: com o as sessões e o tamanho delas, tableSumDiscipline: Tempo de estudo por aluno (soma das sessões)
+# e tableSumPerTest: tempo de estudo entre provas.
 # Andrey Menezes - versão 2.0 (Fevereiro 2013)
 
 dados = read.csv("dados/diferencaTimestamp.csv", stringsAsFactors=F)
 
-limiar = quantile(dados$diferenca, 0.78)
-
 #Calculando a sessao de cada submissao
-tableSession = data.frame(matricula=c(), session=c(), timeSession=c(), lastSubmission=c())
-dados$session = NA
-amountSubmission = 0
-timeSession = 0
-session = 1
-matricula = dados[1,"matricula"]
-for(i in 1:length(dados$matricula)) {
-	if((dados[i,"diferenca"] < limiar) & matricula == dados[i, "matricula"]) {
-		dados$session[i] = session
-		amountSubmission = amountSubmission+1
-		timeSession = timeSession+dados[i,"diferenca"]
+sessaoDeCadaSubmissao = function(dados, limiar) {
+	tableSession = data.frame(matricula=c(), session=c(), timeSession=c(), lastSubmission=c())
+	dados$session = NA
+	amountSubmission = 0
+	timeSession = 0
+	session = 1
+	matricula = dados[1,"matricula"]
+	for(i in 1:length(dados$matricula)) {
+		if((dados[i,"diferenca"] < limiar) & matricula == dados[i, "matricula"]) {
+			dados$session[i] = session
+			amountSubmission = amountSubmission+1
+			timeSession = timeSession+dados[i,"diferenca"]
+		}
+		if(matricula != dados[i, "matricula"]) {
+			tableSession = rbind(tableSession, data.frame(matricula, session, timeSession, dados[i-1,"dataHora"], amountSubmission))
+			matricula = dados[i, "matricula"]
+			session = 1
+			dados$session[i] = session
+			timeSession = 0
+			amountSubmission = 1
+		}
+		if((dados[i,"diferenca"] > limiar) & matricula == dados[i, "matricula"]) {
+			tableSession = rbind(tableSession, data.frame(matricula, session, timeSession, dados[i-1,"dataHora"], amountSubmission))
+			session = session+1
+			dados$session[i] = session
+			timeSession = 0
+			amountSubmission = 1
+		}
 	}
-	if(matricula != dados[i, "matricula"]) {
-		tableSession = rbind(tableSession, data.frame(matricula, session, timeSession, dados[i-1,"dataHora"], amountSubmission))
-		matricula = dados[i, "matricula"]
-		session = 1
-		dados$session[i] = session
-		timeSession = 0
-		amountSubmission = 1
-	}
-	if((dados[i,"diferenca"] > limiar) & matricula == dados[i, "matricula"]) {
-		tableSession = rbind(tableSession, data.frame(matricula, session, timeSession, dados[i-1,"dataHora"], amountSubmission))
-		session = session+1
-		dados$session[i] = session
-		timeSession = 0
-		amountSubmission = 1
-	}
+	return(tableSession)
 }
 
-#Tabela com matricula, sessão, tempo da sessão, data da ultima submissão da sessão
+limiar = quantile(dados$diferenca, 0.78)
+tableSession = sessaoDeCadaSubmissao(dados, limiar)
+
+#Tabela com matricula, sess?o, tempo da sess?o, data da ultima submiss?o da sess?o
 colnames(tableSession) = c("matricula", "session", "timeSession", "lastSubmission", "amountSubmission")
 write.csv(tableSession, "dados/TableSessionLength.csv", row.names=F)
 
-#Tabela da média das sessões de cada aluno
+#Tabela da m?dia das sess?es de cada aluno
 tableSumDiscipline = with(tableSession, aggregate(timeSession, list(matricula), FUN=sum))
 colnames(tableSumDiscipline) = c("matricula", "sumSession")
 write.csv(tableSumDiscipline, "dados/tableSumDiscipline.csv", row.names=F)
 
-#Tabela da média das sessões de cada aluno separado por cada prova
+#Tabela da m?dia das sess?es de cada aluno separado por cada prova
 tableSumPerTest = c(matricula=c(), sumSessions=c(), Prova=c())
 
 test1 = subset(tableSession, as.numeric(as.POSIXct(tableSession[,"lastSubmission"], origin="1970-01-01")) < as.numeric(as.POSIXct("2011-09-17 10:00:00", origin="1970-01-01")))

@@ -1,5 +1,6 @@
-#Script para US5
-#Tamanho Sessões x Notas Prova 1,2,3.
+# Script para analise Tamanho Sessões x Notas Prova 1,2,3.
+# Quem? - Versão 2.0 (Fevereiro 2013)
+
 require(nortest)
 
 sessoes <- read.csv("dados/tableSumPerTest.csv")
@@ -13,7 +14,7 @@ p1 <- subset(geral, prova1 >= 0 & status != "#VALUE!", select=c(matricula,prova1
 p2 <- subset(geral, prova2 >= 0 & status != "#VALUE!", select=c(matricula,prova2) )
 p3 <- subset(geral, prova3.ou.projeto >= 0 & status != "#VALUE!", select=c(matricula,prova3.ou.projeto) )
 
-#sem acumular tamanho da sessao
+# Sem acumular tamanho da sessao
 sessoes.prova1 <- merge(sessao1,p1,by.x="matricula",by.y="matricula")
 colnames(sessoes.prova1) <- c("matricula", "tamanhoSessao", "nota.prova1")
 sessoes.prova2 <- merge(sessao2,p2,by.x="matricula",by.y="matricula")
@@ -21,20 +22,20 @@ colnames(sessoes.prova2) <- c("matricula", "tamanhoSessao", "nota.prova2")
 sessoes.prova3 <- merge(sessao3,p3,by.x="matricula",by.y="matricula")
 colnames(sessoes.prova3) <- c("matricula", "tamanhoSessao", "nota.prova3")
 
-#acumulada
+# Acumulada
 tabela2 = with(sessao2, aggregate(sumSessions, list(matricula), FUN=sum))
 colnames(tabela2) <- c("matricula","sumSessao")
 tabela3 = with(sessoes,aggregate(sumSessions,list(matricula),FUN=sum))
 colnames(tabela3) <- c("matricula","sumSessao")
 
 
-#data frame para acumulada
+# Data frame para acumulada
 sessoes.acm2 <- merge(tabela2,p2,by.x="matricula",by.y="matricula")
 colnames(sessoes.acm2) <- c("matricula", "tamanhoSessaoAcm", "nota.prova2")
 sessoes.acm3 <- merge(tabela3,p3,by.x="matricula",by.y="matricula")
 colnames(sessoes.acm3) <- c("matricula", "tamanhoSessaoAcm", "nota.prova3")
 
-#SessoesAcm x Prova2
+# SessoesAcm x Prova2
 png(filename = "TamanhoSessoesProva2Acm.png", width=650)
 par(mfrow=c(1,2))
 hist(sessoes.acm2$tamanhoSessaoAcm, main="Histograma Tamanho Sessoes Acm", xlab="Tamanho Sessoes", ylab="Frequencia")

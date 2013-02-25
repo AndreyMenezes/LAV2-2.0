@@ -1,3 +1,7 @@
+# O que?
+# Quem? - Versão 2.0 (Fevereiro 2013)
+
+
 data_ex = read.csv("dados/exercicios-20112.csv",header=F)
 #data_geral = read.csv("dados/Geral.csv")
 

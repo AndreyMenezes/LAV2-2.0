@@ -1,5 +1,5 @@
-#
-#Alberto
+# O que?
+# Alberto - Versão 2.0 (Fevereiro 2013)
 
 sessoes<-read.csv("dados/TableSessionLength.csv")
 sessoes<- subset(sessoes,select=lastSubmission)

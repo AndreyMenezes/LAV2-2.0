@@ -1,5 +1,5 @@
-# Codigo que cria as tabelas dos agrupamentos dos dados
-# Andrey Menezes e Iara Ribeiro - vers?o 2.0 (Fevereiro 2013)
+# Codigo para a analise de correlação entre o tempo de estudo e nota final
+# Andrey Menezes e Iara Ribeiro - versão 2.0 (Fevereiro 2013)
 
 data_sum = read.csv("dados/tableSumDiscipline.csv")
 data_all = read.csv("dados/Geral.csv")
@@ -29,7 +29,8 @@ dev.off()
 ad.test(data_sum$sumSession)
 shapiro.test(data_sum$sumSession)
 
-png(filename = "cor-temposessoes.png", width=650)
+#Realiza os testes da correlação
+png(filename = "corr-temposessoes.png", width=650)
 plot(data_all$nota.final.teoria,
 	(data_sum$sumSession/3600), 
 	log="xy", xlab = "Nota na disciplina", ylab = "Tempo total de Estudo", 

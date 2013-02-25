@@ -10,7 +10,7 @@ prova.dois = read.csv("../dados/Prova2.csv")
 prova.tres = read.csv("../dados/Prova3.csv")
 
 #Script de automatização UC3 e UC4
-source("../processamento.R")
+source("../Processamento/processamento.R")
 
 #Script de automatização UC1
 source("../Processamento/UC1-A Priori.R")

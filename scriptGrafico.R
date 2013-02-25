@@ -1,3 +1,5 @@
+
+
 require(ggplot2)
 
 dados <- read.csv("tableMeanDiscipline.csv")

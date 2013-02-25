@@ -1,3 +1,6 @@
+# O que?
+# Quem? - Versão 2.0 (Fevereiro 2013)
+
 require(nortest)
 require(ggplot2)
 

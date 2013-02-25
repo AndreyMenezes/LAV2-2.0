@@ -1,5 +1,5 @@
-#Codigo gerador do grafico do total de sessões por dia durante o periodo
-#Alberto - versão 2.0(Fevereiro 2013)
+# Codigo gerador do grafico do total de sessões por dia durante o periodo
+# Alberto - versão 2.0 (Fevereiro 2013)
 
 require(ggplot2)
 sessoes<-read.csv("dados/tabelaDataSessao.csv")

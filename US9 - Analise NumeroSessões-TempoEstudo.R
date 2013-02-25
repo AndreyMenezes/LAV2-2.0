@@ -1,4 +1,5 @@
-#Script da US 9
+# Script para analisar a relação entre número de sessões e tempo total de estudo.
+# Iury Gregory - Versão 2.0 (Fevereiro 2013)
 
 require(nortest)
 require(ggplot2)
