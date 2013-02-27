@@ -26,7 +26,7 @@ print( shapiro.test(dados$atividade))
 print( cor.test(dados$sumSession,dados$atividade,method=c("kendall")))
 print( cor.test(dados$sumSession,dados$atividade,method=c("spearman")))
 
-#grafico para analise dos dados ad .
+#grafico para analise dos dados de tempo total de estudo
 png(filename = "US6-TempoTotalEstudo.png", width=650)
 par(mfrow=c(1,2))
 hist(dados$sumSession, main="Histograma Tempo Total de Estudo", xlab="Tempo Total de Estudo", ylab="Frequencia")
