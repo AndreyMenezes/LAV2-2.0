@@ -1,5 +1,5 @@
-# Codigo para analise de n˙mero de submissıes pelo tempo
-# Andrey Menezes - vers„o 2.0 (Fevereiro 2013)
+# Codigo para analise de n√∫mero de submiss√µes pelo tempo
+# Andrey Menezes - vers√£o 2.0 (Fevereiro 2013)
 
 library(plyr)
 
@@ -11,4 +11,4 @@ colnames(dados) = c("matricula","data")
 submission = count(dados, "data")
 
 a = qplot(submission$data, submission$freq, geom="histogram", xlab="Tempo", ylab="Numero de submissoes")
-a + geom_vline(xintercept = "9/26/2011", colour="green", linetype = "longdash")                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+a + geom_vline(xintercept = "9/26/2011", colour="green", linetype = "longdash")

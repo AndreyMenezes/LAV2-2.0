@@ -1,5 +1,5 @@
 # Codigo que cria as tabelas dos agrupamentos dos dados
-# Andrey Menezes - versão 2.0 (Fevereiro 2013)
+# Andrey Menezes - versÃ£o 2.0 (Fevereiro 2013)
 
 #dados usados
 data_exerc = read.csv("../dados/exercicios-20112.csv")
@@ -9,11 +9,11 @@ prova.um = read.csv("../dados/Prova1.csv")
 prova.dois = read.csv("../dados/Prova2.csv")
 prova.tres = read.csv("../dados/Prova3.csv")
 
-#Script de automatização UC3 e UC4
+#Script de automatiza??o UC3 e UC4
 source("../Processamento/processamento.R")
 
-#Script de automatização UC1
+#Script de automatiza??o UC1
 source("../Processamento/UC1-A Priori.R")
 
-#Script de automatização UC2
+#Script de automatiza??o UC2
 source("../Processamento/UC2.R")
