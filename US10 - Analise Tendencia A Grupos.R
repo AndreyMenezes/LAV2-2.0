@@ -34,8 +34,8 @@ for(n in 1:10) {
   for(i in 2:(length(dados)-1)) {
     for(e in (i+1):length(dados)) {
       if(i != e) {
-        objetos = data.frame(runif(60, min(dados[,i]), max(dados[,i])), runif(60, min(dados[,e]), max(dados[,e])))
-        parcial = hopkins(dados[,c(i,e)], 60, objetos, minimo)
+        objetos = data.frame(runif(15, min(dados[,i]), max(dados[,i])), runif(15, min(dados[,e]), max(dados[,e])))
+        parcial = hopkins(dados[,c(i,e)], 15, objetos, minimo)
         if (parcial > stats) {
           stats = parcial
           atrib1 = i
@@ -47,4 +47,5 @@ for(n in 1:10) {
     }
   }
 }
-colnames(hopkins.table) = c("A_Q", "A_C", "A_TA", "A_AS", "A_QS", "A_CS", "Q_C", "Q_TA", "Q_AS", "Q_QS", "Q_CS", "C_TA", "C_AS", "C_QS", "C_CS", "TA_AS", "TA_QS", "TA_CS", "AS_QS", "AS_CS", "QS_CS")
+
+#colnames(hopkins.table) = c()
