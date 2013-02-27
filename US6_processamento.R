@@ -1,4 +1,5 @@
-# O que?
+# Script para gerar tabela de agrupamento de atividade para ser utilizada 
+# no script US6_analise.R
 # Quem? - Versão 2.0 (Fevereiro 2013)
 
 
