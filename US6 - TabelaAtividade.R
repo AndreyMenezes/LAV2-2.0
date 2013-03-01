@@ -1,6 +1,6 @@
 # Script para gerar tabela de agrupamento de atividade para ser utilizada 
-# no script US6_analise.R
-# Quem? - Versão 2.0 (Fevereiro 2013)
+# no script US6 - Analise Corr  TempoTotalEstudo-AtividadeEstudo.R
+# Iury Gregory Melo Ferreira - Versão 2.0 (Fevereiro 2013)
 
 
 data_ex = read.csv("dados/exercicios-20112.csv",header=F)
