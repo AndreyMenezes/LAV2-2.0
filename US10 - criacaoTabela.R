@@ -16,8 +16,10 @@ dados.exercicios <- dados.exercicios[order(dados.exercicios$matricula,dados.exer
 dados.exercicios <- unique(dados.exercicios)
 
 dados.numExercicios <- count(dados.exercicios,"matricula")
+colnames(dados.numExercicios) <- c("matricula","num.exercicios")
 dados.tempo$sumSession <- dados.tempo$sumSession/3600
-dados.tamanhoSessao <- with(dados.sessao, aggregate(session,list(matricula),FUN=median))
+colnames(dados.tempo) <- c("matricula","tempo.total.estudo")
+dados.tamanhoSessao <- with(dados.sessao, aggregate(timeSession,list(matricula),FUN=median))
 colnames(dados.tamanhoSessao) <- c("matricula","mediana.sessao")
 dados.nota <- subset(dados.geral,nota.final.pratica >= 0,select=c(matricula,nota.final.pratica))
 
@@ -25,6 +27,5 @@ dados <- merge(dados.tamanhoSessao,dados.nota,by.x="matricula",by.y="matricula")
 dados <- merge(dados,dados.numExercicios,by.x="matricula",by.y="matricula")
 dados <- merge(dados,dados.tempo,by.x="matricula",by.y="matricula")
 dados <- merge(dados,dados.atividade,by.x="matricula",by.y="matricula")
-
 
 write.table(dados,"dados/TabelaParaPerfis.csv",sep=",",row.names=F,col.names=T)
