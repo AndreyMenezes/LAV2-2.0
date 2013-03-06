@@ -30,6 +30,8 @@ Sumário das variáveis (Apenas listando-as)
 
 
 
+
+
 ok Tamanho das sessões - limiar 0,78 percentil = 1:41h 
 ok Tempo total de estudo
 ok Número de sessões
