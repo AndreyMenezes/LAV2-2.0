@@ -1,0 +1,59 @@
+# Sumário de variáveis de todo o projeto
+# Andrey Menezes LA2.0 (Março 2013)
+
+Sumário das variáveis (Apenas listando-as)
+
+ - Variáveis independentes
+	+ Variáveis absolutas
+		.Tamanho da sessão
+		.Número de submissões
+		.Número de dias do período
+
+	+ Variáveis derivadas
+		.Tempo total de estudo
+		.Número de sessões
+		.Atividade de estudo
+		.Proporção de submissões corretas
+		.Tamanho médio das sessões
+		.Número de submissões corretas
+
+
+ - Variáveis dependentes
+	.Nota na disciplina
+	.Nota nas provas (1,2,3)
+	.Nota final provas
+	.Nota de cada questão da prova
+
+
+
+
+
+
+
+ok Tamanho das sessões - limiar 0,78 percentil = 1:41h 
+ok Tempo total de estudo
+ok Número de sessões
+ok Atividade de estudo: nº de dias que houveram submissões/total de dias do período (gráfico de distribuição)
+
+ok Correlação: Tempo total de estudo / Nota na disciplina - Dados não normais - Spearman 0.49 Moderada
+ok Correlação: Tempo total de estudo / Nota prova 1 - Dados não Normais - Spearman 0.20 / Acumulada 0.20 Fraca
+ok Correlação: Tempo total de estudo / Nota prova 2 - Dados não Normais - Spearman 0.37 / Acumulada 0.46 Fraca
+ok Correlação: Tempo total de estudo / Nota prova 3 - Dados não Normais - Spearman 0.30 Fraca / Acumulada 0.56 Moderada
+ok Correlação: Tempo total de estudo / Atividade de estudo - Atividade é normal - Spearman 0.82 Forte
+
+ok Análise Número de submissões / Tempo (Indicação de cada prova) - (Gráfico distribuição)
+ok Análise Tamanho sessões de estudo / Tempo (Indicação de cada prova) - (Gráfico distribuição)
+ok Análise Tamanho médio das sessões de estudo / Tempo (Indicação de cada prova) - (Gráfico distribuição)
+ok Análise Número total de sessões / Tempo (Indicação de cada prova) - (Gráfico distribuição)
+ok Análise Proporção de submissões corretas / Tempo (Indicação de cada prova) - (Gráfico distribuição)
+
+ok Correlação: Número de sessões / Tempo total de estudo - Dados não normais - Spearman 0.85 Forte
+ok Análise Número de submissões corretas / Nota final provas  - (Gráfico distribuição)
+ok Correlação: Nota final provas / Número de submissões corretas - Dados não normais - Spearman 0.67 Moderada
+ok Análise Número de submissões / Nota final disciplina  - (Gráfico distribuição)
+ok Análise Atividade de estudo / Nota final disciplina  - (Gráfico distribuição)
+
+ok Analise Questão da prova / Exercício - frequência e probabilidade de co-ocorrência
+ok Agrupamento: Nota final disciplina / Número de submissões - k-means k=4 (Gráfico)
+ok Agrupamento: Nota final disciplina / Atividade de estudo - k-means k=4 (Gráfico)
+ok Analise Número de submissões corretas para cada questão - (Gráfico distribuição)

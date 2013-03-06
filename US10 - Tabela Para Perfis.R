@@ -29,6 +29,7 @@ dados <- merge(dados,dados.numExercicios,by.x="matricula",by.y="matricula")
 dados <- merge(dados,dados.tempo,by.x="matricula",by.y="matricula")
 dados <- merge(dados,dados.atividade,by.x="matricula",by.y="matricula")
 
+write.table(dados,"dados/TabelaParaPerfis.csv",sep=",",row.names=F,col.names=T)
 
 ##############################################################################
 
