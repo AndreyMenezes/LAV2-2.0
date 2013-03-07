@@ -1,6 +1,5 @@
-# Codigo para analise da variação do número de questões corretas por sessão ao longo do semestre
+# Codigo para analise da variação da proporção do número de questões corretas por sessão ao longo do semestre
 # Iara Ribeiro - versao 2.0 (Fevereiro 2013)
-
 
 exercicios <- read.csv("dados/exercicios-20112.csv",header=F,stringsAsFactors=F)
 exercicios <- exercicios[exercicios$V6 == 10, ]
@@ -10,7 +9,6 @@ sessoes <- read.csv("dados/TableSessionLength.csv", header = T)
 sessoes$correct.submissions = 0
 
 #adicionar a coluna com timestamp
-
 exercicios$V7 <- as.numeric(as.POSIXct(exercicios$V7,origin="1970-01-01"))
 sessoes$time.stamp <- as.numeric(as.POSIXct(sessoes$lastSubmission,origin="1970-01-01"))
 
@@ -36,32 +34,10 @@ for (i in 1:length(matriculas)){
                                                  & submissoes.aluno$V7 < sessao.fim, ])
     }
   }
-  
-  submissoes.corretas <- rbind(submissoes.corretas, sessoes.aluno)
-  
+  submissoes.corretas <- rbind(submissoes.corretas, sessoes.aluno)  
 }
 
-data.prova1 <- "2011-09-17"
-data.prova2 <- "2011-10-29"
-data.prova3 <- "2011-11-26"
-
 submissoes.corretas[,7] = sub(' .*', '', submissoes.corretas[,4])
-submissoes.corretas$correct.submissions <- submissoes.corretas$correct.submissions/submissoes.corretas$amountSubmission
+submissoes.corretas$proporcao.sub.corretas <- submissoes.corretas$correct.submissions/submissoes.corretas$amountSubmission
 
 write.csv(submissoes.corretas, "dados/submissoes_corretas_tempo.csv")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
