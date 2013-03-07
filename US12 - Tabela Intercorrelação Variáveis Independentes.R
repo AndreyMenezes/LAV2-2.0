@@ -18,6 +18,7 @@ tabela3$ProporcaoSubCorretas = tabela3$correctSubmissions/tabela3$amountSubmissi
 
 tabelaCompleta = merge(tabela1,tabela2,by.x="matricula",by.y="matricula")
 tabelaCompleta = merge(tabelaCompleta,tabela3,by.x="matricula",by.y="matricula")
+colnames(tabelaCompleta) = c("matricula","Mediana Sessao","Numero Exercicios","Tempo Total Estudo","Atividade","Numero Sessoes","Total Submissoes","Submissoes Corretas","Proporcao Submissoes Corretas")
 
 tabelaCorrelacao = cor(tabelaCompleta[,-1], use="complete.obs", method=c("spearman"))
 
