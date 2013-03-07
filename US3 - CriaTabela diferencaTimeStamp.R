@@ -1,5 +1,6 @@
 # Script para criar a tabela diferencaTimeStamp, que calcula a diferença de tempo entre uma submissão e outra
 # Iury Gregory - Versão 2.0 (Fevereiro 2013)
+require(ggplot2)
 
 dados <- read.csv("dados/exercicios-20112.csv",header=F,stringsAsFactors=F)
 dados.pre <- dados[,c(1,4)]
@@ -29,4 +30,18 @@ diferencaTimeStamp = function(dados) {
 }
 
 df <- diferencaTimeStamp(dados.pre)
-write.table(df,"diferencaTimestamp.csv",sep=",",row.names=F,col.names=T)
+write.table(df,"dados/diferencaTimestamp.csv",sep=",",row.names=F,col.names=T)
+
+
+dados2 <- read.csv("dados/tableMeanDiscipline.csv",header=T)
+dados2$matricula <- reorder(dados2$matricula,dados$meanSession, order=T)
+
+
+grafico<-ggplot(dados2,aes(x=matricula,y=meanSession)) + geom_bar() +
+theme_bw()+labs(x="Matriculas",y="Tempo das Sessões")+ylim(c(0,max(dados2$meanSession)))+
+theme(panel.grid.minor.x=element_blank(), panel.grid.major.x=element_blank())+
+theme(axis.ticks = element_blank()) 
+
+png("SesssionLength.png",bg="transparent",width = 800, height = 600)
+print(grafico)
+dev.off()

@@ -1,5 +1,5 @@
 # Script para analise Tamanho Sessões x Notas Prova 1,2,3.
-# Quem? - Versão 2.0 (Fevereiro 2013)
+# Iury Gregory - Versão 2.0 (Fevereiro 2013)
 
 require(nortest)
 
