@@ -68,7 +68,6 @@ data_comp = cbind(data_comp, nota.teoria = (data_geral$media.parcial.teoria * 0.
                   nota.final = data_geral$nota.final.teoria)
 
 #salvando os dados nas tabelas
-
 write.csv(data_c1, "AgrupamentoExercicios.csv")
 write.csv(data_c2, "AgrupamentoAtividade.csv")
 write.csv(data_comp, "uc4.csv")

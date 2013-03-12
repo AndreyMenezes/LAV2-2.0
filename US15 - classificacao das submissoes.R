@@ -1,6 +1,7 @@
-# US15 
-# Iury Gregory - 
-1312818964 -1312808400
+# Classifica as submissões como dentro e fora de horário de aula
+# Iury Gregory LA2.0 (Março 2013)
+#- 1312818964 -1312808400
+
 exercicios <- read.csv("dados/exercicios-20112.csv",header=F)
 colnames(exercicios) <- c("matricula","questao","turma","data.hora","status","nota")
 geral <- read.csv("dados/Geral.csv",header=T)

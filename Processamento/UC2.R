@@ -96,6 +96,3 @@ write.csv(correlacoes, "correlacoes.csv", quote=F, row.names=F, col.names=F)
 write.csv(prova.exercicio.um[, c("nota", "numero.submissoes")], "UC2-Prova1.csv", quote=F, row.names=F, col.names=F)
 write.csv(prova.exercicio.dois[, c("nota", "numero.submissoes")], "UC2-Prova2.csv", quote=F, row.names=F, col.names=F)
 write.csv(prova.exercicio.tres[, c("nota", "numero.submissoes")], "UC2-Prova3.csv", quote=F, row.names=F, col.names=F)
-
-
-
