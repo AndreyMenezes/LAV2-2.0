@@ -11,4 +11,4 @@ Exercicios.csv
 	Contém as colunas: matricula, numero da questão, turma, timestamp, testes, nota.
 
 Um arquivo para cada prova realizada, os arquivos devem estar no formato Prova1.csv, Prova2.csv e etc.
-	Contém as colunas: turma.teoria, turma.pratica, matricula, nota, nota em cada questão (uma por coluna)
+	Contém as colunas: turma.teoria, turma.pratica, matricula, nota, nota em cada questão (uma por coluna).
