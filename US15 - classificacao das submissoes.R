@@ -15,26 +15,29 @@ dados$comparador <- seq(1,nrow(dados),1)
 aulas <- read.csv("dados/aulas.csv",header=F)
 colnames(aulas) <- c("data.hora","weekday","turma.pratica")
 aulas$data <- substr(aulas$data.hora,1,10) 
-aulas$timestamp <- as.numeric(as.POSIXct(aulas$data.hora,origin="1970-01-01"))
+aulas$timestampAula <- as.numeric(as.POSIXct(aulas$data.hora,origin="1970-01-01"))
 aulas <- aulas[,c(-1,-2)]
 
 
 classificador <- function(tabela.aluno,tabela.aula,num.turma){
 	dados.aluno <- subset(tabela.aluno,tabela.aluno$turma.pratica == num.turma)
 	dados.aula <- subset(tabela.aula,tabela.aula$turma.pratica == num.turma)
-	tabela.saida <- data.frame(comparador <-c(),classe <- c())
+	tabela.saida <- data.frame(comparador <-c(),classe <- c(),timestampAula <- c())
 	for(i in 1:nrow(dados.aluno)){
 		for(j in 1:nrow(dados.aula)){
 			if(dados.aluno [i,"turma.pratica"] == dados.aula[j,"turma.pratica"]){
 				tabela.saida[i,"comparador"] <- dados.aluno[i,"comparador"]
 				if(dados[i,"data"] == aulas[j,"data"]){
-					if(dados.aluno[i,"timestamp"]-dados.aula[j,"timestamp"] <= 7200){
+					if(dados.aluno[i,"timestamp"]-dados.aula[j,"timestampAula"] <= 7200){
 						tabela.saida[i,"classe"] = "realizado em horario de aula"
+						tabela.saida[i,"timestampAula"] <- dados.aula[j,"timestampAula"]
 					}else{
 						tabela.saida[i,"classe"] = "realizado fora do horario de aula"
+						tabela.saida[i,"timestampAula"] <- dados.aula[j,"timestampAula"]
 					}
 				}else{
-					tabela.saida[i,"classe"] = "realizado fora do horario de aula"		
+					tabela.saida[i,"classe"] = "realizado fora do horario de aula"
+					tabela.saida[i,"timestampAula"] <- dados.aula[j,"timestampAula"]		
 				}
 			}
 		
@@ -52,7 +55,7 @@ tabela.class <- rbind(tabela1,tabela2,tabela3,tabela4,tabela5)
 
 
 dados2 <- merge(dados,tabela.class,by="comparador")
-dados2 <- dados2[,c(-1,-4,-9)]
+dados2 <- dados2[,c(-1,-3,-9)]
 
 sub.aula <- subset(dados2,dados2$classe == "realizado em horario de aula")
 sub.fora <- subset(dados2,dados2$classe == "realizado fora do horario de aula")
