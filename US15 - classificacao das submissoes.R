@@ -54,4 +54,8 @@ tabela.class <- rbind(tabela1,tabela2,tabela3,tabela4,tabela5)
 dados2 <- merge(dados,tabela.class,by="comparador")
 dados2 <- dados2[,c(-1,-4,-9)]
 
-write.table(dados2,"dados/SubmissoesClassificadas.csv",sep=",",row.names=F,col.names=T)
+sub.aula <- subset(dados2,dados2$classe == "realizado em horario de aula")
+sub.fora <- subset(dados2,dados2$classe == "realizado fora do horario de aula")
+
+write.table(sub.fora,"dados/SubmissoesForaHorarioDeAula.csv",sep=",",row.names=F,col.names=T)
+write.table(sub.aula,"dados/SubmissoesHorarioDeAula.csv",sep=",",row.names=F,col.names=T)
