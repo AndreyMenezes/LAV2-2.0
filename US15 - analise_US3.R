@@ -79,7 +79,7 @@ sessaoDeCadaSubmissao = function(dados, limiar) {
 
 
 ############################################################################
-Em aula
+#Em aula
 ############################################################################
 
 submissoes.aula <- read.csv("dados/SubmissoesHorarioDeAula.csv",header=T)
@@ -126,7 +126,7 @@ tableSumPerTest.aula = rbind(tableSumPerTest.aula, test3.aula)
 write.csv(tableSumPerTest.aula, "dados/tableSumPerTestEmAula.csv", row.names=F)
 	
 ############################################################################
-Fora de aula
+#Fora de aula
 ############################################################################
 
 submissoes.fora <- read.csv("dados/SubmissoesForaHorarioDeAula.csv",header=T)
