@@ -1,10 +1,6 @@
 library(foreign)
 
-get.exercicios.com.nota.minima = function(fonte, nota.minima=10) {
-  print("Lendo Exercicios...")
-  exercicios = read.csv(fonte)
-  print(paste("Tamanho do arquivo (em linhas):", nrow(exercicios)))
-  
+get.exercicios.com.nota.minima = function(exercicios, nota.minima=10) {
   filtro = exercicios[exercicios$nota == nota.minima, ]
   print(paste("Tamanho do arquivo (em linhas) com nota minima de ", nota.minima, ": ", nrow(filtro), sep=""))
   print("Exercicios Lidos.")
@@ -149,7 +145,7 @@ format.prova.exercicio = function(dados, exercicio.inicial, exercicio.final) {
   return(formatado)
 }
 
-dados.exercicios.submetidos = get.exercicios.com.nota.minima("../Dados/exercicios-20112.csv")
+dados.exercicios.submetidos = get.exercicios.com.nota.minima(data_exerc)
 colnames(dados.exercicios.submetidos) = c("matricula", "exercicio", "MM.DD.AAAA.HH.MM")
 
 data.prova.um = as.POSIXct("9.17.2011.10.00.00", format="%m.%d.%Y.%H.%M.%S")

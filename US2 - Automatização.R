@@ -1,4 +1,4 @@
-﻿# Codigo que cria as tabelas dos agrupamentos dos dados
+﻿# Codigo para automatização do LA1.0
 # Andrey Menezes - versão 2.0 (Fevereiro 2013)
 
 #dados usados
@@ -14,6 +14,7 @@ source("../Processamento/processamento.R")
 
 #Script de automatizacao UC1
 source("../Processamento/UC1-A Priori.R")
+source("../Processamento/UC1_Passo1.R")
 
 #Script de automatizacao UC2
 source("../Processamento/UC2.R")
