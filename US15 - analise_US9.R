@@ -4,7 +4,7 @@ require(nortest)
 require(ggplot2)
 
 #leitura dos dados.aula
-dados.aula <- read.csv("dados/tableSessionLength.csv",header=T)
+dados.aula <- read.csv("dados/TableSessionLengthEmAula.csv",header=T)
 
 dados.aula.numSessoes <- with(dados.aula,aggregate(session,list(matricula),FUN=max))
 colnames(dados.aula.numSessoes) <- c("matricula","num.sessoes")
@@ -66,7 +66,7 @@ dev.off()
 ######################
 
 
-dados.fora <- read.csv("dados/tableSessionLength.csv",header=T)
+dados.fora <- read.csv("dados/TableSessionLengthForadeAula.csv",header=T)
 dados.fora.numSessoes <- with(dados.fora,aggregate(session,list(matricula),FUN=max))
 colnames(dados.fora.numSessoes) <- c("matricula","num.sessoes")
 dados.fora.tempoEstudo <- with(dados.fora,aggregate(timeSession/3600,list(matricula),FUN=sum))

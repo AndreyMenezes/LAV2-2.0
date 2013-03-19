@@ -39,9 +39,6 @@ diferencaTimeStampAula = function(dados) {
 }
 
 
-
-
-
 sessaoDeCadaSubmissao = function(dados, limiar) {
 	tableSession = data.frame(matricula=c(),turma=c(),data.hora = c(),status = c(),nota = c(), turma.pratica = c(), timestamp = c(), classe = c(),
                                 session=c(), timeSession=c(), lastSubmission=c())
@@ -78,6 +75,45 @@ sessaoDeCadaSubmissao = function(dados, limiar) {
 }
 
 
+sessaoDeCadaSubmissaoAula = function(dados) {
+  tableSession = data.frame(matricula=c(),turma=c(),data.hora = c(),status = c(),nota = c(), turma.pratica = c(), timestamp = c(), classe = c(),
+                            session=c(), timeSession=c(), lastSubmission=c())
+  dados$session = NA
+  amountSubmission = 0
+  timeSession = 0
+  session = 1
+  matricula = dados[1,"matricula"]
+  aula = dados[1,"timestampAula"]
+  for(i in 1:length(dados$matricula)) {
+    if((dados[i,"timestampAula"] == aula) & matricula == dados[i, "matricula"]) {
+      dados$session[i] = session
+      amountSubmission = amountSubmission+1
+      timeSession = timeSession+dados[i,"diferenca"]
+    }
+    if(matricula != dados[i, "matricula"]) {
+      tableSession = rbind(tableSession,data.frame(matricula,dados[i-1,"turma"],dados[i-1,"data.hora"],dados[i-1,"status"],dados[i-1,"nota"],
+                                                   dados[i-1,"turma.pratica"],dados[i-1,"timestamp"],dados[i-1,"classe"],session, timeSession, amountSubmission) )
+      matricula = dados[i, "matricula"]
+      aula = dados[i,"timestampAula"]
+      session = 1
+      dados$session[i] = session
+      timeSession = 0
+      amountSubmission = 1
+    }
+    if((dados[i,"timestampAula"] != aula) & matricula == dados[i, "matricula"]) {
+      tableSession = rbind(tableSession, data.frame(matricula,dados[i-1,"turma"],dados[i-1,"data.hora"],dados[i-1,"status"],dados[i-1,"nota"],
+                                                    dados[i-1,"turma.pratica"],dados[i-1,"timestamp"],dados[i-1,"classe"],session, timeSession, amountSubmission))
+      aula = dados[i,"timestampAula"]
+      session = session+1
+      dados$session[i] = session
+      timeSession = 0
+      amountSubmission = 1
+    }
+  }
+  return(tableSession)    
+}
+
+
 ############################################################################
 #Em aula
 ############################################################################
@@ -89,8 +125,7 @@ submissoes.aula <- submissoes.aula[order(submissoes.aula$timestamp,decreasing = 
 tabela.aula <- diferencaTimeStampAula(submissoes.aula) 
 
 tabela = tabela.aula
-limiar.aula = 7200
-tabelaSessaoAula = sessaoDeCadaSubmissao(tabela, limiar.aula)
+tabelaSessaoAula = sessaoDeCadaSubmissaoAula(tabela)
 
 			
 #Tabela com matricula, sess?o, tempo da sess?o, data da ultima submiss?o da sess?o
