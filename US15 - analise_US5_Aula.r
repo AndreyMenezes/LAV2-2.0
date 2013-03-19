@@ -101,7 +101,6 @@ dev.off()
 
 
 
-
 ad.test(sessoes.prova1$tamanhoSessao) #FALSE
 shapiro.test(sessoes.prova1$tamanhoSessao) #FALSE
 ad.test(sessoes.prova2$tamanhoSessao) #FALSE

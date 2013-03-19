@@ -79,3 +79,21 @@ submissoes.corretas.fora[,"timestamp"] = sub(' .*', '', submissoes.corretas.fora
 submissoes.corretas.fora$proporcao.sub.corretas <- submissoes.corretas.fora$correct.submissions/submissoes.corretas.fora$amountSubmission
 
 write.csv(submissoes.corretas.fora, "dados/submissoes_corretas_tempo_fora_aula.csv")
+
+data <- read.csv("dados/submissoes_corretas_tempo_fora_aula.csv", header = T)
+data = aggregate(data$correct.submissions, list("timestamp" = data$timestamp), FUN = mean)
+png(filename = "Grafico_us8_questoescorretas.png", width = 850, height = 480)
+plot <- ggplot(data, aes(as.Date(timestamp),x)) + geom_line()+ 
+  labs(x = "Tempo em dias", y = "Submissões Corretas") +
+  scale_x_date(breaks = "1 month",labels = date_format("%m/%Y")) + theme_white()
+plot + geom_segment(aes(x = as.Date(provas_data), y = 0, xend = as.Date(provas_data), yend = 7, color=Provas), size = 1.2)
+dev.off()
+
+data <- read.csv("dados/submissoes_corretas_tempo_aula.csv", header = T)
+data = aggregate(data$correct.submissions, list("timestamp" = data$timestamp), FUN = mean)
+png(filename = "Grafico_us8_questoescorretas.png", width = 850, height = 480)
+plot <- ggplot(data, aes(as.Date(timestamp, format="%m/%d/%Y"),x)) + geom_line()+ 
+  labs(x = "Tempo em dias", y = "Submissões Corretas") +
+  scale_x_date(breaks = "1 month",labels = date_format("%m/%Y")) + theme_white()
+plot + geom_segment(aes(x = as.Date(provas_data, format="%Y/%m/%d"), y = 0, xend = as.Date(provas_data, format="%Y/%m/%d"), yend = 7, color=Provas), size = 1.2)
+dev.off()
