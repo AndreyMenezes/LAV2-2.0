@@ -37,7 +37,24 @@ diferencaTimeStampAula = function(dados) {
 	}
 	return (df)
 }
-
+diferencaTimeStampAula2 = function(dados) {
+	matriculas <- unique(dados$matricula)
+	dados$diferenca2 <- 0
+	df <- data.frame()
+	for( i in 1:length(matriculas)){
+		indices <- which(dados$matricula == matriculas[i])
+		temp <- dados[indices,]
+		for ( j in 1:nrow(temp)){
+			if( j == 1){
+				temp[j,"diferenca2"] = 0
+			}else{
+				temp[j,"diferenca2"] = temp[j,"timestamp"] - temp[j-1,"timestamp"]
+			}
+		}
+		df = rbind(df,temp)
+	}
+	return (df)
+}
 
 sessaoDeCadaSubmissao = function(dados, limiar) {
 	tableSession = data.frame(matricula=c(),turma=c(),data.hora = c(),status = c(),nota = c(), turma.pratica = c(), timestamp = c(), classe = c(),
@@ -75,45 +92,6 @@ sessaoDeCadaSubmissao = function(dados, limiar) {
 }
 
 
-sessaoDeCadaSubmissaoAula = function(dados) {
-  tableSession = data.frame(matricula=c(),turma=c(),data.hora = c(),status = c(),nota = c(), turma.pratica = c(), timestamp = c(), classe = c(),
-                            session=c(), timeSession=c(), lastSubmission=c())
-  dados$session = NA
-  amountSubmission = 0
-  timeSession = 0
-  session = 1
-  matricula = dados[1,"matricula"]
-  aula = dados[1,"timestampAula"]
-  for(i in 1:length(dados$matricula)) {
-    if((dados[i,"timestampAula"] == aula) & matricula == dados[i, "matricula"]) {
-      dados$session[i] = session
-      amountSubmission = amountSubmission+1
-      timeSession = timeSession+dados[i,"diferenca"]
-    }
-    if(matricula != dados[i, "matricula"]) {
-      tableSession = rbind(tableSession,data.frame(matricula,dados[i-1,"turma"],dados[i-1,"data.hora"],dados[i-1,"status"],dados[i-1,"nota"],
-                                                   dados[i-1,"turma.pratica"],dados[i-1,"timestamp"],dados[i-1,"classe"],session, timeSession, amountSubmission) )
-      matricula = dados[i, "matricula"]
-      aula = dados[i,"timestampAula"]
-      session = 1
-      dados$session[i] = session
-      timeSession = 0
-      amountSubmission = 1
-    }
-    if((dados[i,"timestampAula"] != aula) & matricula == dados[i, "matricula"]) {
-      tableSession = rbind(tableSession, data.frame(matricula,dados[i-1,"turma"],dados[i-1,"data.hora"],dados[i-1,"status"],dados[i-1,"nota"],
-                                                    dados[i-1,"turma.pratica"],dados[i-1,"timestamp"],dados[i-1,"classe"],session, timeSession, amountSubmission))
-      aula = dados[i,"timestampAula"]
-      session = session+1
-      dados$session[i] = session
-      timeSession = 0
-      amountSubmission = 1
-    }
-  }
-  return(tableSession)    
-}
-
-
 ############################################################################
 #Em aula
 ############################################################################
@@ -123,14 +101,19 @@ submissoes.aula <- submissoes.aula[order(submissoes.aula$timestamp,decreasing = 
 
 
 tabela.aula <- diferencaTimeStampAula(submissoes.aula) 
+tabela <- diferencaTimeStampAula2(tabela.aula) 
+tabela <- tabela[,-11]
+colnames(tabela) <- c("matricula","turma","data.hora","status","nota","turma.pratica","timestamp","classe","dataHora","timestampAula","diferenca")
 
-tabela = tabela.aula
-tabelaSessaoAula = sessaoDeCadaSubmissaoAula(tabela)
+
+limiar.aula = 7200
+tabelaSessaoAula = sessaoDeCadaSubmissao(tabela, limiar.aula)
 
 			
 #Tabela com matricula, sess?o, tempo da sess?o, data da ultima submiss?o da sess?o
-colnames(tabelaSessaoAula ) = c("matricula","turma","data.hora","status","nota","turma.pratica"
-,"timestamp","classe","session", "timeSession","amountSubmission")
+
+colnames(tabelaSessaoAula ) = c("matricula","turma","data.hora","status","nota",
+"turma.pratica","timestamp","classe","session", "timeSession","amountSubmission")
 write.csv(tabelaSessaoAula, "dados/TableSessionLengthEmAula.csv", row.names=F)
 
 
@@ -170,9 +153,19 @@ submissoes.fora <- submissoes.fora[,-9]
 
 tabela.fora <- diferencaTimeStamp(submissoes.fora) 
 
-tabela2 = tabela.fora
+
+png("Ecdf.png",bg="white",width=1000, height=480)
+par(mfrow=c(1,2))
+Ecdf(tabela.fora$diferenca/3600,q=(0.78),xlab = "Intervalo entre Submissões",
+ylab="Proporção <= x",label.curves=TRUE,col="blue",las=1, subtitles=FALSE)
+Ecdf(tabela.fora$diferenca/3600,q=(0.78),xlab = "Intervalo entre Submissões",
+ylab="Proporção <= x",label.curves=TRUE,col="blue",las=1, subtitles=FALSE, xlim=c(0,48))
+dev.off()
+
+
+tabela2 = tabela.fora 
 limiar = quantile(tabela.fora$diferenca, 0.78)
-tabelaSessaoFora = sessaoDeCadaSubmissao(tabela2, limiar)
+tabelaSessaoFora = sessaoDeCadaSubmissao(tabela2, limiar) 
 
 
 			
