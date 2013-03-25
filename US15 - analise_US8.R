@@ -31,32 +31,33 @@ write.csv(submissoes.corretas, "dados/submissoes_corretas_tempo_aula.csv")
 #FORA DE AULA#
 ##############
 
-
-
-
-
 exercicios.fora <- read.csv("dados/SubmissoesForaHorarioDeAula.csv",header=T,stringsAsFactors=F)
 exercicios.fora <- exercicios.fora[exercicios.fora$nota == 10,]
 exercicios.fora$data <- strptime(exercicios.fora$data.hora,format="%m/%d/%Y")
 
-sessoes.fora <- read.csv("dados/TableSessionLengthForadeAula.csv", header = T)
+sessoes.fora <- read.csv("dados/TableSessionLengthForadeAula.csv", header = T,stringsAsFactors=F)
 sessoes.fora$data <- strptime(sessoes.fora$data.hora,format="%m/%d/%Y")
 
-matriculas2 <- unique(sessoes.fora$matricula)
+matriculas.fora <- unique(sessoes.fora$matricula)
 
 submissoes.corretas.fora <- c()
 
-for (k in 1:length(matriculas2)){
-  aluno <- matriculas2[k]
-  sessoes.aluno.fora <- sessoes.fora[sessoes.fora$matricula == aluno, ]
-  submissoes.aluno.fora <- exercicios.fora[exercicios.fora$matricula == aluno, ]
-  for(l in 0:nrow(sessoes.aluno.fora)){
-	sessoes.aluno.fora[l,"correct.submissions"] <- nrow(submissoes.aluno.fora[submissoes.aluno.fora$data == sessoes.aluno.fora[l,"data"],])
+for(k in 1:length(matriculas.fora)){
+  aluno.fora <- matriculas.fora[k]
+  sessoes.aluno.fora <- sessoes.fora[sessoes.fora$matricula == aluno.fora, ]
+  submissoes.aluno.fora <- exercicios.fora[exercicios.fora == aluno.fora, ]
+  for( p in 1:nrow(sessoes.aluno.fora)){
+    sessao.fim <- sessoes.aluno.fora[p,"timestamp"]
+    sessao.inicio <- sessao.fim - sessoes.aluno.fora[p,"timeSession"]
+    sub.setaluno <- subset(submissoes.aluno.fora, timestamp >= sessao.inicio)
+    sub.setaluno <- subset(sub.setaluno, timestamp <= sessao.fim)
+    sessoes.aluno.fora[p,"correct.submissions"] <- nrow(sub.setaluno)
   }
   submissoes.corretas.fora <- rbind(submissoes.corretas.fora, sessoes.aluno.fora)  
 }
 
-#submissoes.corretas.fora[,"timestamp"] = sub(' .*', '', submissoes.corretas.fora[,"data.hora"])
 submissoes.corretas.fora$proporcao.sub.corretas <- submissoes.corretas.fora$correct.submissions/submissoes.corretas.fora$amountSubmission
+max(submissoes.corretas.fora$proporcao.sub.corretas)
+
 
 write.csv(submissoes.corretas.fora, "dados/submissoes_corretas_tempo_fora_aula.csv")
