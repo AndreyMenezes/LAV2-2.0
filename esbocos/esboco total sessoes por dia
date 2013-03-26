@@ -1,0 +1,41 @@
+library(plyr)
+library(ggplot2)
+library(scales)
+
+
+dados = read.csv("dados/TableSessionLengthForaDeAula.csv",header=T)
+dados$data.hora<-strptime(dados$data.hora,"%m/%d/%Y")
+
+df <- count(dados,"data.hora")
+
+
+#Definindo o tema padrao em todos os plots
+
+theme_white <- function() {
+  theme_update(#tamanho do texto do eixo x e y
+               axis.title = element_text(size=16),
+               #tamanho do texto dos valores do eixo x e y
+               axis.text = element_text(size=14),
+               #removendo a caixa da legenda
+               legend.title = element_blank(),
+               #Tamanho do texto da legenda
+               legend.title = element_text(size = 16),
+               legend.text = element_text(size = 16)
+               )
+}
+
+theme_set(theme_bw())
+theme_white()
+
+grafico<- ggplot(df, aes(as.Date(data.hora),freq)) + geom_line()+ 
+        labs(x = "Datas", y = "Número Total de Sessões") +
+        scale_x_date(breaks = "1 week",labels = date_format("%d/%m")) + theme_white()+
+geom_segment(aes(x = as.Date("2011-09-17"), y = 0, xend = as.Date("2011-09-17"), yend = 105, color ="Prova 1"), size = 1.2)+
+geom_segment(aes(x = as.Date("2011-10-29"), y = 0, xend = as.Date("2011-10-29"), yend = 105, color ="Prova 2"), size = 1.2)+
+geom_segment(aes(x = as.Date("2011-11-26"), y = 0, xend = as.Date("2011-11-26"), yend = 105, color ="Prova 3"), size = 1.2)+
+geom_segment(aes(x = as.Date("2011-12-03"), y = 0, xend = as.Date("2011-12-03"), yend = 105, color ="Prova Final"), size = 1.2)
+
+
+png(filename = "Grafico_us7_totalSessoes.png", width = 850, height = 480)
+print(grafico)
+dev.off()
