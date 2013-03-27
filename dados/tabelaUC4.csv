@@ -1,0 +1,639 @@
+  
+
+
+<!DOCTYPE html>
+<html>
+  <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# githubog: http://ogp.me/ns/fb/githubog#">
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>LAV2-2.0/dados/tabelaUC4.csv at teste · AndreyMenezes/LAV2-2.0</title>
+    <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub" />
+    <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub" />
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-114.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-144.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144.png" />
+    <link rel="logo" type="image/svg" href="http://github-media-downloads.s3.amazonaws.com/github-logo.svg" />
+    <meta name="msapplication-TileImage" content="/windows-tile.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+
+    
+    
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+    <meta content="authenticity_token" name="csrf-param" />
+<meta content="pzcxvZXgDX31UUkeJuccQr0Xk5fwd8OS0nJ4HwXYCZk=" name="csrf-token" />
+
+    <link href="https://a248.e.akamai.net/assets.github.com/assets/github-b3fe7e030b8a29c95b855b2d87adfee4e0ef3a28.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="https://a248.e.akamai.net/assets.github.com/assets/github2-4312b87920c325b3e264aa31c1a1be5c5514dc60.css" media="all" rel="stylesheet" type="text/css" />
+    
+
+
+      <script src="https://a248.e.akamai.net/assets.github.com/assets/frameworks-d76b58e749b52bc47a4c46620bf2c320fabe5248.js" type="text/javascript"></script>
+      <script src="https://a248.e.akamai.net/assets.github.com/assets/github-dbc6ed058c86c09fdea206ad95df106a97d573f2.js" type="text/javascript"></script>
+      
+      <meta http-equiv="x-pjax-version" content="07c66c8ffeb62a46784b0400c4727056">
+
+        <link data-pjax-transient rel='permalink' href='/AndreyMenezes/LAV2-2.0/blob/9ca2492069977d84edf8728b93a834b9ab76bd71/dados/tabelaUC4.csv'>
+    <meta property="og:title" content="LAV2-2.0"/>
+    <meta property="og:type" content="githubog:gitrepository"/>
+    <meta property="og:url" content="https://github.com/AndreyMenezes/LAV2-2.0"/>
+    <meta property="og:image" content="https://secure.gravatar.com/avatar/315130a66efd15d151409184dd9c3f74?s=420&amp;d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"/>
+    <meta property="og:site_name" content="GitHub"/>
+    <meta property="og:description" content="Learning analytics 2.0. Contribute to LAV2-2.0 development by creating an account on GitHub."/>
+    <meta property="twitter:card" content="summary"/>
+    <meta property="twitter:site" content="@GitHub">
+    <meta property="twitter:title" content="AndreyMenezes/LAV2-2.0"/>
+
+    <meta name="description" content="Learning analytics 2.0. Contribute to LAV2-2.0 development by creating an account on GitHub." />
+
+  <link href="https://github.com/AndreyMenezes/LAV2-2.0/commits/teste.atom" rel="alternate" title="Recent Commits to LAV2-2.0:teste" type="application/atom+xml" />
+
+  </head>
+
+
+  <body class="logged_in page-blob windows vis-public env-production  ">
+    <div id="wrapper">
+
+      
+
+      
+      
+      
+
+      <div class="header header-logged-in true">
+  <div class="container clearfix">
+
+    <a class="header-logo-blacktocat" href="https://github.com/">
+  <span class="mega-icon mega-icon-blacktocat"></span>
+</a>
+
+    <div class="divider-vertical"></div>
+
+      <a href="/notifications" class="notification-indicator tooltipped downwards" title="You have no unread notifications">
+    <span class="mail-status all-read"></span>
+  </a>
+  <div class="divider-vertical"></div>
+
+
+      <div class="command-bar js-command-bar  ">
+            <form accept-charset="UTF-8" action="/search" class="command-bar-form" id="top_search_form" method="get">
+  <a href="/search/advanced" class="advanced-search-icon tooltipped downwards command-bar-search" id="advanced_search" title="Advanced search"><span class="mini-icon mini-icon-advanced-search "></span></a>
+
+  <input type="text" name="q" id="js-command-bar-field" placeholder="Search or type a command" tabindex="1" data-username="AndreyMenezes" autocapitalize="off">
+
+  <span class="mini-icon help tooltipped downwards" title="Show command bar help">
+    <span class="mini-icon mini-icon-help"></span>
+  </span>
+
+  <input type="hidden" name="ref" value="commandbar">
+
+  <div class="divider-vertical"></div>
+</form>
+        <ul class="top-nav">
+            <li class="explore"><a href="https://github.com/explore">Explore</a></li>
+            <li><a href="https://gist.github.com">Gist</a></li>
+            <li><a href="/blog">Blog</a></li>
+          <li><a href="http://help.github.com">Help</a></li>
+        </ul>
+      </div>
+
+    
+
+  
+    <ul id="user-links">
+      <li>
+        <a href="https://github.com/AndreyMenezes" class="name">
+          <img height="20" src="https://secure.gravatar.com/avatar/315130a66efd15d151409184dd9c3f74?s=140&amp;d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" width="20" /> AndreyMenezes
+        </a>
+      </li>
+      <li>
+        <a href="/new" id="new_repo" class="tooltipped downwards" title="Create a new repo">
+          <span class="mini-icon mini-icon-create"></span>
+        </a>
+      </li>
+      <li>
+        <a href="/settings/profile" id="account_settings"
+          class="tooltipped downwards"
+          title="Account settings ">
+          <span class="mini-icon mini-icon-account-settings"></span>
+        </a>
+      </li>
+      <li>
+        <a href="/logout" data-method="post" id="logout" class="tooltipped downwards" title="Sign out">
+          <span class="mini-icon mini-icon-logout"></span>
+        </a>
+      </li>
+    </ul>
+
+
+
+    
+  </div>
+</div>
+
+      
+
+      
+
+      
+
+
+            <div class="site hfeed" itemscope itemtype="http://schema.org/WebPage">
+      <div class="hentry">
+        
+        <div class="pagehead repohead instapaper_ignore readability-menu ">
+          <div class="container">
+            <div class="title-actions-bar">
+              
+
+
+<ul class="pagehead-actions">
+
+    <li class="nspr">
+      <a href="/AndreyMenezes/LAV2-2.0/pull/new/teste" class="button minibutton btn-pull-request" icon_class="mini-icon-pull-request"><span class="mini-icon mini-icon-pull-request"></span>Pull Request</a>
+    </li>
+
+    <li class="subscription">
+      <form accept-charset="UTF-8" action="/notifications/subscribe" data-autosubmit="true" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="pzcxvZXgDX31UUkeJuccQr0Xk5fwd8OS0nJ4HwXYCZk=" /></div>  <input id="repository_id" name="repository_id" type="hidden" value="8223953" />
+
+    <div class="select-menu js-menu-container js-select-menu">
+      <span class="minibutton select-menu-button js-menu-target">
+        <span class="js-select-button">
+          <span class="mini-icon mini-icon-unwatch"></span>
+          Unwatch
+        </span>
+      </span>
+
+      <div class="select-menu-modal-holder js-menu-content">
+        <div class="select-menu-modal">
+          <div class="select-menu-header">
+            <span class="select-menu-title">Notification status</span>
+            <span class="mini-icon mini-icon-remove-close js-menu-close"></span>
+          </div> <!-- /.select-menu-header -->
+
+          <div class="select-menu-list js-navigation-container">
+
+            <div class="select-menu-item js-navigation-item js-navigation-target ">
+              <span class="select-menu-item-icon mini-icon mini-icon-confirm"></span>
+              <div class="select-menu-item-text">
+                <input id="do_included" name="do" type="radio" value="included" />
+                <h4>Not watching</h4>
+                <span class="description">You only receive notifications for discussions in which you participate or are @mentioned.</span>
+                <span class="js-select-button-text hidden-select-button-text">
+                  <span class="mini-icon mini-icon-watching"></span>
+                  Watch
+                </span>
+              </div>
+            </div> <!-- /.select-menu-item -->
+
+            <div class="select-menu-item js-navigation-item js-navigation-target selected">
+              <span class="select-menu-item-icon mini-icon mini-icon-confirm"></span>
+              <div class="select-menu-item-text">
+                <input checked="checked" id="do_subscribed" name="do" type="radio" value="subscribed" />
+                <h4>Watching</h4>
+                <span class="description">You receive notifications for all discussions in this repository.</span>
+                <span class="js-select-button-text hidden-select-button-text">
+                  <span class="mini-icon mini-icon-unwatch"></span>
+                  Unwatch
+                </span>
+              </div>
+            </div> <!-- /.select-menu-item -->
+
+            <div class="select-menu-item js-navigation-item js-navigation-target ">
+              <span class="select-menu-item-icon mini-icon mini-icon-confirm"></span>
+              <div class="select-menu-item-text">
+                <input id="do_ignore" name="do" type="radio" value="ignore" />
+                <h4>Ignoring</h4>
+                <span class="description">You do not receive any notifications for discussions in this repository.</span>
+                <span class="js-select-button-text hidden-select-button-text">
+                  <span class="mini-icon mini-icon-mute"></span>
+                  Stop ignoring
+                </span>
+              </div>
+            </div> <!-- /.select-menu-item -->
+
+          </div> <!-- /.select-menu-list -->
+
+        </div> <!-- /.select-menu-modal -->
+      </div> <!-- /.select-menu-modal-holder -->
+    </div> <!-- /.select-menu -->
+
+</form>
+    </li>
+
+    <li class="js-toggler-container js-social-container starring-container ">
+      <a href="/AndreyMenezes/LAV2-2.0/unstar" class="minibutton js-toggler-target star-button starred upwards" title="Unstar this repo" data-remote="true" data-method="post" rel="nofollow">
+        <span class="mini-icon mini-icon-remove-star"></span>
+        <span class="text">Unstar</span>
+      </a>
+      <a href="/AndreyMenezes/LAV2-2.0/star" class="minibutton js-toggler-target star-button unstarred upwards" title="Star this repo" data-remote="true" data-method="post" rel="nofollow">
+        <span class="mini-icon mini-icon-star"></span>
+        <span class="text">Star</span>
+      </a>
+      <a class="social-count js-social-count" href="/AndreyMenezes/LAV2-2.0/stargazers">0</a>
+    </li>
+
+        <li>
+          <a href="/AndreyMenezes/LAV2-2.0/fork" class="minibutton js-toggler-target fork-button lighter upwards" title="Fork this repo" rel="nofollow" data-method="post">
+            <span class="mini-icon mini-icon-branch-create"></span>
+            <span class="text">Fork</span>
+          </a>
+          <a href="/AndreyMenezes/LAV2-2.0/network" class="social-count">0</a>
+        </li>
+
+
+</ul>
+
+              <h1 itemscope itemtype="http://data-vocabulary.org/Breadcrumb" class="entry-title public">
+                <span class="repo-label"><span>public</span></span>
+                <span class="mega-icon mega-icon-public-repo"></span>
+                <span class="author vcard">
+                  <a href="/AndreyMenezes" class="url fn" itemprop="url" rel="author">
+                  <span itemprop="title">AndreyMenezes</span>
+                  </a></span> /
+                <strong><a href="/AndreyMenezes/LAV2-2.0" class="js-current-repository">LAV2-2.0</a></strong>
+              </h1>
+            </div>
+
+            
+  <ul class="tabs">
+    <li><a href="/AndreyMenezes/LAV2-2.0/tree/teste" class="selected" highlight="repo_source repo_downloads repo_commits repo_tags repo_branches">Code</a></li>
+    <li><a href="/AndreyMenezes/LAV2-2.0/network" highlight="repo_network">Network</a></li>
+    <li><a href="/AndreyMenezes/LAV2-2.0/pulls" highlight="repo_pulls">Pull Requests <span class='counter'>0</span></a></li>
+
+      <li><a href="/AndreyMenezes/LAV2-2.0/issues" highlight="repo_issues">Issues <span class='counter'>0</span></a></li>
+
+      <li><a href="/AndreyMenezes/LAV2-2.0/wiki" highlight="repo_wiki">Wiki</a></li>
+
+
+    <li><a href="/AndreyMenezes/LAV2-2.0/graphs" highlight="repo_graphs repo_contributors">Graphs</a></li>
+
+      <li>
+        <a href="/AndreyMenezes/LAV2-2.0/settings">Settings</a>
+      </li>
+
+  </ul>
+  
+<div class="tabnav">
+
+  <span class="tabnav-right">
+    <ul class="tabnav-tabs">
+          <li><a href="/AndreyMenezes/LAV2-2.0/tags" class="tabnav-tab" highlight="repo_tags">Tags <span class="counter blank">0</span></a></li>
+    </ul>
+    
+  </span>
+
+  <div class="tabnav-widget scope">
+
+
+    <div class="select-menu js-menu-container js-select-menu js-branch-menu">
+      <a class="minibutton select-menu-button js-menu-target" data-hotkey="w" data-ref="teste">
+        <span class="mini-icon mini-icon-branch"></span>
+        <i>branch:</i>
+        <span class="js-select-button">teste</span>
+      </a>
+
+      <div class="select-menu-modal-holder js-menu-content js-navigation-container">
+
+        <div class="select-menu-modal">
+          <div class="select-menu-header">
+            <span class="select-menu-title">Switch branches/tags</span>
+            <span class="mini-icon mini-icon-remove-close js-menu-close"></span>
+          </div> <!-- /.select-menu-header -->
+
+          <div class="select-menu-filters">
+            <div class="select-menu-text-filter">
+              <input type="text" id="commitish-filter-field" class="js-filterable-field js-navigation-enable" placeholder="Find or create a branch…">
+            </div>
+            <div class="select-menu-tabs">
+              <ul>
+                <li class="select-menu-tab">
+                  <a href="#" data-tab-filter="branches" class="js-select-menu-tab">Branches</a>
+                </li>
+                <li class="select-menu-tab">
+                  <a href="#" data-tab-filter="tags" class="js-select-menu-tab">Tags</a>
+                </li>
+              </ul>
+            </div><!-- /.select-menu-tabs -->
+          </div><!-- /.select-menu-filters -->
+
+          <div class="select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket css-truncate" data-tab-filter="branches">
+
+            <div data-filterable-for="commitish-filter-field" data-filterable-type="substring">
+
+                <div class="select-menu-item js-navigation-item js-navigation-target ">
+                  <span class="select-menu-item-icon mini-icon mini-icon-confirm"></span>
+                  <a href="/AndreyMenezes/LAV2-2.0/blob/master/dados/tabelaUC4.csv" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="master" rel="nofollow" title="master">master</a>
+                </div> <!-- /.select-menu-item -->
+                <div class="select-menu-item js-navigation-item js-navigation-target selected">
+                  <span class="select-menu-item-icon mini-icon mini-icon-confirm"></span>
+                  <a href="/AndreyMenezes/LAV2-2.0/blob/teste/dados/tabelaUC4.csv" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="teste" rel="nofollow" title="teste">teste</a>
+                </div> <!-- /.select-menu-item -->
+            </div>
+
+              <form accept-charset="UTF-8" action="/AndreyMenezes/LAV2-2.0/branches" class="js-create-branch select-menu-item select-menu-new-item-form js-navigation-item js-navigation-target js-new-item-form" method="post"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="pzcxvZXgDX31UUkeJuccQr0Xk5fwd8OS0nJ4HwXYCZk=" /></div>
+
+                <span class="mini-icon mini-icon-branch-create select-menu-item-icon"></span>
+                <div class="select-menu-item-text">
+                  <h4>Create branch: <span class="js-new-item-name"></span></h4>
+                  <span class="description">from ‘teste’</span>
+                </div>
+                <input type="hidden" name="name" id="name" class="js-new-item-submit" />
+                <input type="hidden" name="branch" id="branch" value="teste" />
+                <input type="hidden" name="path" id="branch" value="dados/tabelaUC4.csv" />
+              </form> <!-- /.select-menu-item -->
+
+          </div> <!-- /.select-menu-list -->
+
+
+          <div class="select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket css-truncate" data-tab-filter="tags">
+            <div data-filterable-for="commitish-filter-field" data-filterable-type="substring">
+
+            </div>
+
+            <div class="select-menu-no-results">Nothing to show</div>
+
+          </div> <!-- /.select-menu-list -->
+
+        </div> <!-- /.select-menu-modal -->
+      </div> <!-- /.select-menu-modal-holder -->
+    </div> <!-- /.select-menu -->
+
+  </div> <!-- /.scope -->
+
+  <ul class="tabnav-tabs">
+    <li><a href="/AndreyMenezes/LAV2-2.0/tree/teste" class="selected tabnav-tab" highlight="repo_source">Files</a></li>
+    <li><a href="/AndreyMenezes/LAV2-2.0/commits/teste" class="tabnav-tab" highlight="repo_commits">Commits</a></li>
+    <li><a href="/AndreyMenezes/LAV2-2.0/branches" class="tabnav-tab" highlight="repo_branches" rel="nofollow">Branches <span class="counter ">2</span></a></li>
+  </ul>
+
+</div>
+
+  
+  
+  
+
+
+            
+          </div>
+        </div><!-- /.repohead -->
+
+        <div id="js-repo-pjax-container" class="container context-loader-container" data-pjax-container>
+          
+
+
+<!-- blob contrib key: blob_contributors:v21:233b105bee3225e81d2bf1cd9f332de8 -->
+<!-- blob contrib frag key: views10/v8/blob_contributors:v21:233b105bee3225e81d2bf1cd9f332de8 -->
+
+
+<div id="slider">
+    <div class="frame-meta">
+
+      <p title="This is a placeholder element" class="js-history-link-replace hidden"></p>
+
+        <div class="breadcrumb">
+          <span class='bold'><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/AndreyMenezes/LAV2-2.0/tree/teste" class="js-slide-to" data-branch="teste" data-direction="back" itemscope="url"><span itemprop="title">LAV2-2.0</span></a></span></span><span class="separator"> / </span><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/AndreyMenezes/LAV2-2.0/tree/teste/dados" class="js-slide-to" data-branch="teste" data-direction="back" itemscope="url"><span itemprop="title">dados</span></a></span><span class="separator"> / </span><strong class="final-path">tabelaUC4.csv</strong> <span class="js-zeroclipboard zeroclipboard-button" data-clipboard-text="dados/tabelaUC4.csv" data-copied-hint="copied!" title="copy to clipboard"><span class="mini-icon mini-icon-clipboard"></span></span>
+        </div>
+
+      <a href="/AndreyMenezes/LAV2-2.0/find/teste" class="js-slide-to" data-hotkey="t" style="display:none">Show File Finder</a>
+
+
+        <div class="commit commit-loader file-history-tease js-deferred-content" data-url="/AndreyMenezes/LAV2-2.0/contributors/teste/dados/tabelaUC4.csv">
+          Fetching contributors…
+
+          <div class="participation">
+            <p class="loader-loading"><img alt="Octocat-spinner-32-eaf2f5" height="16" src="https://a248.e.akamai.net/assets.github.com/images/spinners/octocat-spinner-32-EAF2F5.gif?1338945075" width="16" /></p>
+            <p class="loader-error">Cannot retrieve contributors at this time</p>
+          </div>
+        </div>
+
+    </div><!-- ./.frame-meta -->
+
+    <div class="frames">
+      <div class="frame" data-permalink-url="/AndreyMenezes/LAV2-2.0/blob/9ca2492069977d84edf8728b93a834b9ab76bd71/dados/tabelaUC4.csv" data-title="LAV2-2.0/dados/tabelaUC4.csv at teste · AndreyMenezes/LAV2-2.0 · GitHub" data-type="blob">
+
+        <div id="files" class="bubble">
+          <div class="file">
+            <div class="meta">
+              <div class="info">
+                <span class="icon"><b class="mini-icon mini-icon-text-file"></b></span>
+                <span class="mode" title="File Mode">file</span>
+                  <span>59 lines (58 sloc)</span>
+                <span>5.986 kb</span>
+              </div>
+              <div class="actions">
+                <div class="button-group">
+                        <a class="minibutton"
+                           href="/AndreyMenezes/LAV2-2.0/edit/teste/dados/tabelaUC4.csv"
+                           data-method="post" rel="nofollow" data-hotkey="e">Edit</a>
+                  <a href="/AndreyMenezes/LAV2-2.0/raw/teste/dados/tabelaUC4.csv" class="button minibutton " id="raw-url">Raw</a>
+                    <a href="/AndreyMenezes/LAV2-2.0/blame/teste/dados/tabelaUC4.csv" class="button minibutton ">Blame</a>
+                  <a href="/AndreyMenezes/LAV2-2.0/commits/teste/dados/tabelaUC4.csv" class="button minibutton " rel="nofollow">History</a>
+                </div><!-- /.button-group -->
+              </div><!-- /.actions -->
+
+            </div>
+                <div class="data type-text js-blob-data">
+      <table cellpadding="0" cellspacing="0" class="lines">
+        <tr>
+          <td>
+            <pre class="line_numbers"><span id="L1" rel="#L1">1</span>
+<span id="L2" rel="#L2">2</span>
+<span id="L3" rel="#L3">3</span>
+<span id="L4" rel="#L4">4</span>
+<span id="L5" rel="#L5">5</span>
+<span id="L6" rel="#L6">6</span>
+<span id="L7" rel="#L7">7</span>
+<span id="L8" rel="#L8">8</span>
+<span id="L9" rel="#L9">9</span>
+<span id="L10" rel="#L10">10</span>
+<span id="L11" rel="#L11">11</span>
+<span id="L12" rel="#L12">12</span>
+<span id="L13" rel="#L13">13</span>
+<span id="L14" rel="#L14">14</span>
+<span id="L15" rel="#L15">15</span>
+<span id="L16" rel="#L16">16</span>
+<span id="L17" rel="#L17">17</span>
+<span id="L18" rel="#L18">18</span>
+<span id="L19" rel="#L19">19</span>
+<span id="L20" rel="#L20">20</span>
+<span id="L21" rel="#L21">21</span>
+<span id="L22" rel="#L22">22</span>
+<span id="L23" rel="#L23">23</span>
+<span id="L24" rel="#L24">24</span>
+<span id="L25" rel="#L25">25</span>
+<span id="L26" rel="#L26">26</span>
+<span id="L27" rel="#L27">27</span>
+<span id="L28" rel="#L28">28</span>
+<span id="L29" rel="#L29">29</span>
+<span id="L30" rel="#L30">30</span>
+<span id="L31" rel="#L31">31</span>
+<span id="L32" rel="#L32">32</span>
+<span id="L33" rel="#L33">33</span>
+<span id="L34" rel="#L34">34</span>
+<span id="L35" rel="#L35">35</span>
+<span id="L36" rel="#L36">36</span>
+<span id="L37" rel="#L37">37</span>
+<span id="L38" rel="#L38">38</span>
+<span id="L39" rel="#L39">39</span>
+<span id="L40" rel="#L40">40</span>
+<span id="L41" rel="#L41">41</span>
+<span id="L42" rel="#L42">42</span>
+<span id="L43" rel="#L43">43</span>
+<span id="L44" rel="#L44">44</span>
+<span id="L45" rel="#L45">45</span>
+<span id="L46" rel="#L46">46</span>
+<span id="L47" rel="#L47">47</span>
+<span id="L48" rel="#L48">48</span>
+<span id="L49" rel="#L49">49</span>
+<span id="L50" rel="#L50">50</span>
+<span id="L51" rel="#L51">51</span>
+<span id="L52" rel="#L52">52</span>
+<span id="L53" rel="#L53">53</span>
+<span id="L54" rel="#L54">54</span>
+<span id="L55" rel="#L55">55</span>
+<span id="L56" rel="#L56">56</span>
+<span id="L57" rel="#L57">57</span>
+<span id="L58" rel="#L58">58</span>
+</pre>
+          </td>
+          <td width="100%">
+                  <div class="highlight"><pre><div class='line' id='LC1'>&quot;&quot;,&quot;matricula&quot;,&quot;nota.teoria&quot;,&quot;nota.pratica&quot;,&quot;nota.listas&quot;,&quot;nota.provas&quot;,&quot;nota.final&quot;,&quot;mediana.sessao&quot;,&quot;tempo.total.estudo&quot;,&quot;numeroSessoes&quot;,&quot;ProporcaoSubCorretas&quot;,&quot;status&quot;</div><div class='line' id='LC2'>&quot;1&quot;,&quot;10E8A59E&quot;,1.8,1.5,0.3,2.24,5.8,573.5,24.78,52,0.526548672566372,&quot;aprovado na final&quot;</div><div class='line' id='LC3'>&quot;2&quot;,&quot;13085463&quot;,1.74,1.475,0.36,2.16,6.7,1053,30.2994444444444,50,0.651741293532338,&quot;aprovado na final&quot;</div><div class='line' id='LC4'>&quot;3&quot;,&quot;1397BFB0&quot;,2.64,2.225,0.46,3.64,8.8,739,39.3166666666667,60,0.675,&quot;aprovado por média&quot;</div><div class='line' id='LC5'>&quot;4&quot;,&quot;14A1B78B&quot;,1.8,1.55,0.2,2.64,6.9,2987,24.7791666666667,33,0.549618320610687,&quot;aprovado na final&quot;</div><div class='line' id='LC6'>&quot;5&quot;,&quot;15A3743B&quot;,2.19,1.85,0.3,2.92,7.3,2590.5,33.3169444444444,34,0.646067415730337,&quot;aprovado por média&quot;</div><div class='line' id='LC7'>&quot;6&quot;,&quot;19449717&quot;,1.83,1.55,0.27,1.48,7.5,339,15.7738888888889,49,0.517094017094017,&quot;aprovado na final&quot;</div><div class='line' id='LC8'>&quot;7&quot;,&quot;1A25F6BF&quot;,1.59,1.325,0.265,1.92,5.6,2472,40.9519444444444,49,0.54679802955665,&quot;aprovado na final&quot;</div><div class='line' id='LC9'>&quot;8&quot;,&quot;1B81A33E&quot;,2.7,2.275,0.45,3.48,9,732,28.3016666666667,75,0.620300751879699,&quot;aprovado por média&quot;</div><div class='line' id='LC10'>&quot;9&quot;,&quot;1DF2A12E&quot;,2.58,2.175,0.445,3.44,8.6,871,35.2508333333333,72,0.606271777003484,&quot;aprovado por média&quot;</div><div class='line' id='LC11'>&quot;10&quot;,&quot;210B0D56&quot;,2.46,2.1,0.425,3.12,8.2,2152,29.5647222222222,41,0.581699346405229,&quot;aprovado por média&quot;</div><div class='line' id='LC12'>&quot;11&quot;,&quot;21604216&quot;,1.98,1.725,0.335,3,6.9,863.5,19.615,40,0.611607142857143,&quot;aprovado na final&quot;</div><div class='line' id='LC13'>&quot;12&quot;,&quot;22EB47AA&quot;,2.28,1.925,0.38,2.96,7.6,3145,44.9672222222222,49,0.573883161512027,&quot;aprovado por média&quot;</div><div class='line' id='LC14'>&quot;13&quot;,&quot;2556AF8C&quot;,1.53,1.275,0.3,1.64,6,498,28.1441666666667,51,0.506976744186047,&quot;aprovado na final&quot;</div><div class='line' id='LC15'>&quot;14&quot;,&quot;25762941&quot;,2.28,1.95,0.415,3.12,7.6,636.5,42.1838888888889,56,0.612244897959184,&quot;aprovado por média&quot;</div><div class='line' id='LC16'>&quot;15&quot;,&quot;258DFC4B&quot;,2.25,1.9,0.38,2.8,7.5,1692,61.1961111111111,55,0.581673306772908,&quot;aprovado por média&quot;</div><div class='line' id='LC17'>&quot;16&quot;,&quot;267C1E34&quot;,2.4,2.05,0.35,3.44,8,521,23.3552777777778,47,0.634020618556701,&quot;aprovado por média&quot;</div><div class='line' id='LC18'>&quot;17&quot;,&quot;26EA2FA&quot;,1.71,1.475,0.185,2.08,7,1071,20.1952777777778,30,0.507575757575758,&quot;aprovado na final&quot;</div><div class='line' id='LC19'>&quot;18&quot;,&quot;2777E5EE&quot;,1.5,1.175,0.28,1.72,6.4,2495,43.8005555555556,54,0.493333333333333,&quot;aprovado na final&quot;</div><div class='line' id='LC20'>&quot;19&quot;,&quot;281286BC&quot;,2.49,2.125,0.455,3.36,8.3,1336.5,25.1522222222222,40,0.538745387453875,&quot;aprovado por média&quot;</div><div class='line' id='LC21'>&quot;20&quot;,&quot;2B989949&quot;,1.5,1.25,0.38,1.44,5.6,869,41.0152777777778,63,0.475903614457831,&quot;aprovado na final&quot;</div><div class='line' id='LC22'>&quot;21&quot;,&quot;37594F45&quot;,2.13,1.8,0.345,3.16,7.1,2001.5,55.2363888888889,66,0.5625,&quot;aprovado por média&quot;</div><div class='line' id='LC23'>&quot;22&quot;,&quot;3826E0DE&quot;,2.25,1.9,0.435,1.84,7.5,1688,57.2788888888889,74,0.611111111111111,&quot;aprovado por média&quot;</div><div class='line' id='LC24'>&quot;23&quot;,&quot;390C0CCC&quot;,2.1,1.75,0.425,2.64,7,495.5,21.2644444444444,52,0.607142857142857,&quot;aprovado por média&quot;</div><div class='line' id='LC25'>&quot;24&quot;,&quot;3A1B84F4&quot;,2.22,1.9,0.4,2.16,7.4,1688,43.9616666666667,67,0.62753036437247,&quot;aprovado por média&quot;</div><div class='line' id='LC26'>&quot;25&quot;,&quot;3FE45559&quot;,1.23,1,0.085,1.96,4,254.5,3.49972222222222,18,0.484375,&quot;reprovado na final&quot;</div><div class='line' id='LC27'>&quot;26&quot;,&quot;445E679D&quot;,2.13,1.8,0.26,2.72,7.1,1585,16.9916666666667,23,0.614864864864865,&quot;aprovado por média&quot;</div><div class='line' id='LC28'>&quot;27&quot;,&quot;4482494C&quot;,2.52,2.125,0.405,3.68,8.4,984.5,21.6413888888889,40,0.641732283464567,&quot;aprovado por média&quot;</div><div class='line' id='LC29'>&quot;28&quot;,&quot;44AF14C1&quot;,2.1,1.8,0.43,2.04,7,1749,78.7819444444444,94,0.567307692307692,&quot;aprovado por média&quot;</div><div class='line' id='LC30'>&quot;29&quot;,&quot;46484C5E&quot;,1.95,1.65,0.405,1.92,7.4,349,64.8202777777778,120,0.505882352941176,&quot;aprovado na final&quot;</div><div class='line' id='LC31'>&quot;30&quot;,&quot;4AD45AC5&quot;,2.73,2.275,0.39,3.88,9.1,2022.5,30.8222222222222,44,0.658415841584158,&quot;aprovado por média&quot;</div><div class='line' id='LC32'>&quot;31&quot;,&quot;4B929F6&quot;,2.46,2.075,0.445,3.08,8.2,447,8.73638888888889,30,0.626415094339623,&quot;aprovado por média&quot;</div><div class='line' id='LC33'>&quot;32&quot;,&quot;4C84103A&quot;,2.46,2.1,0.425,3.44,8.2,1226,20.9663888888889,41,0.649402390438247,&quot;aprovado por média&quot;</div><div class='line' id='LC34'>&quot;33&quot;,&quot;4D98EE47&quot;,2.4,2.05,0.435,3.56,8,1834,34.1372222222222,53,0.621399176954732,&quot;aprovado por média&quot;</div><div class='line' id='LC35'>&quot;34&quot;,&quot;51FE3830&quot;,1.89,1.575,0.38,2.36,7.2,3011,57.1925,47,0.616279069767442,&quot;aprovado na final&quot;</div><div class='line' id='LC36'>&quot;35&quot;,&quot;52C319A1&quot;,1.23,1,0.21,1.2,4.4,2366.5,28.3625,24,0.592,&quot;reprovado na final&quot;</div><div class='line' id='LC37'>&quot;36&quot;,&quot;55BA642E&quot;,1.74,1.45,0.185,2.44,7.1,912.5,14.3077777777778,30,0.461077844311377,&quot;aprovado na final&quot;</div><div class='line' id='LC38'>&quot;37&quot;,&quot;562A867F&quot;,2.31,1.975,0.39,3.12,7.7,637.5,22.3955555555556,54,0.633620689655172,&quot;aprovado por média&quot;</div><div class='line' id='LC39'>&quot;38&quot;,&quot;5978A120&quot;,2.61,2.175,0.395,3.84,8.7,1480,26.0688888888889,47,0.698979591836735,&quot;aprovado por média&quot;</div><div class='line' id='LC40'>&quot;39&quot;,&quot;5B8F96B8&quot;,1.56,1.325,0.21,2.96,6.4,1256,17.2477777777778,32,0.578125,&quot;aprovado na final&quot;</div><div class='line' id='LC41'>&quot;40&quot;,&quot;5EA91E42&quot;,2.37,2.025,0.37,2.72,7.9,1337,36.0741666666667,61,0.660550458715596,&quot;aprovado por média&quot;</div><div class='line' id='LC42'>&quot;41&quot;,&quot;63116A24&quot;,2.46,2.075,0.47,2.76,8.2,623,29.1905555555556,66,0.725806451612903,&quot;aprovado por média&quot;</div><div class='line' id='LC43'>&quot;42&quot;,&quot;673B031F&quot;,1.89,1.6,0.24,2.36,6.7,1727,35.1938888888889,50,0.460093896713615,&quot;aprovado na final&quot;</div><div class='line' id='LC44'>&quot;43&quot;,&quot;67657F86&quot;,2.1,1.8,0.365,2.24,7,1074,34.4130555555556,62,0.629807692307692,&quot;aprovado por média&quot;</div><div class='line' id='LC45'>&quot;44&quot;,&quot;6878BF80&quot;,2.25,1.9,0.295,2.6,7.5,1295.5,17.5563888888889,34,0.589041095890411,&quot;aprovado por média&quot;</div><div class='line' id='LC46'>&quot;45&quot;,&quot;68FA8B73&quot;,2.46,2.075,0.4,3.28,8.2,1504,22.98,29,0.669902912621359,&quot;aprovado por média&quot;</div><div class='line' id='LC47'>&quot;46&quot;,&quot;6A197CF&quot;,1.74,1.45,0.265,2.2,7.2,375.5,30.9597222222222,58,0.516393442622951,&quot;aprovado na final&quot;</div><div class='line' id='LC48'>&quot;47&quot;,&quot;71F3C736&quot;,2.49,2.1,0.43,3.36,8.3,1552,48.3969444444444,71,0.605691056910569,&quot;aprovado por média&quot;</div><div class='line' id='LC49'>&quot;48&quot;,&quot;74E3795C&quot;,1.38,1.15,0.115,2.16,5.6,391,8.45111111111111,27,0.407407407407407,&quot;aprovado na final&quot;</div><div class='line' id='LC50'>&quot;49&quot;,&quot;77A35CA&quot;,2.73,2.3,0.35,3.84,9.1,1321,21.5511111111111,44,0.715596330275229,&quot;aprovado por média&quot;</div><div class='line' id='LC51'>&quot;50&quot;,&quot;79CBE190&quot;,2.22,1.875,0.295,2.48,7.4,1786,32.6002777777778,52,0.522388059701492,&quot;aprovado por média&quot;</div><div class='line' id='LC52'>&quot;51&quot;,&quot;7BCB919D&quot;,2.28,1.95,0.45,3.48,7.6,1246,49.7938888888889,74,0.59047619047619,&quot;aprovado por média&quot;</div><div class='line' id='LC53'>&quot;52&quot;,&quot;7BF33A4A&quot;,1.53,1.275,0.175,1.52,6.5,1191,21.5213888888889,45,0.45679012345679,&quot;aprovado na final&quot;</div><div class='line' id='LC54'>&quot;53&quot;,&quot;7C52AF6D&quot;,2.31,1.95,0.29,3.68,7.7,2010,18.4216666666667,27,0.686390532544379,&quot;aprovado por média&quot;</div><div class='line' id='LC55'>&quot;54&quot;,&quot;7DCD514D&quot;,2.1,1.8,0.43,2.08,7,1250,48.1572222222222,76,0.723300970873786,&quot;aprovado por média&quot;</div><div class='line' id='LC56'>&quot;55&quot;,&quot;ADBC154&quot;,1.32,1.1,0.125,1.96,5.8,2519,22.1677777777778,25,0.405405405405405,&quot;aprovado na final&quot;</div><div class='line' id='LC57'>&quot;56&quot;,&quot;E3A19A&quot;,1.86,1.575,0.235,2.04,6.8,1881,17.1080555555556,29,0.539772727272727,&quot;aprovado na final&quot;</div><div class='line' id='LC58'>&quot;57&quot;,&quot;F952D04&quot;,2.58,2.175,0.405,3.88,8.6,252,19.2902777777778,47,0.665137614678899,&quot;aprovado por média&quot;</div></pre></div>
+          </td>
+        </tr>
+      </table>
+  </div>
+
+          </div>
+        </div>
+
+        <a href="#jump-to-line" rel="facebox" data-hotkey="l" class="js-jump-to-line" style="display:none">Jump to Line</a>
+        <div id="jump-to-line" style="display:none">
+          <h2>Jump to Line</h2>
+          <form accept-charset="UTF-8" class="js-jump-to-line-form">
+            <input class="textfield js-jump-to-line-field" type="text">
+            <div class="full-button">
+              <button type="submit" class="button">Go</button>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+</div>
+
+<div id="js-frame-loading-template" class="frame frame-loading large-loading-area" style="display:none;">
+  <img class="js-frame-loading-spinner" src="https://a248.e.akamai.net/assets.github.com/images/spinners/octocat-spinner-128.gif?1347543527" height="64" width="64">
+</div>
+
+
+        </div>
+      </div>
+      <div class="context-overlay"></div>
+    </div>
+
+      <div id="footer-push"></div><!-- hack for sticky footer -->
+    </div><!-- end of wrapper - hack for sticky footer -->
+
+      <!-- footer -->
+      <div id="footer">
+  <div class="container clearfix">
+
+      <dl class="footer_nav">
+        <dt>GitHub</dt>
+        <dd><a href="https://github.com/about">About us</a></dd>
+        <dd><a href="https://github.com/blog">Blog</a></dd>
+        <dd><a href="https://github.com/contact">Contact &amp; support</a></dd>
+        <dd><a href="http://enterprise.github.com/">GitHub Enterprise</a></dd>
+        <dd><a href="http://status.github.com/">Site status</a></dd>
+      </dl>
+
+      <dl class="footer_nav">
+        <dt>Applications</dt>
+        <dd><a href="http://mac.github.com/">GitHub for Mac</a></dd>
+        <dd><a href="http://windows.github.com/">GitHub for Windows</a></dd>
+        <dd><a href="http://eclipse.github.com/">GitHub for Eclipse</a></dd>
+        <dd><a href="http://mobile.github.com/">GitHub mobile apps</a></dd>
+      </dl>
+
+      <dl class="footer_nav">
+        <dt>Services</dt>
+        <dd><a href="http://get.gaug.es/">Gauges: Web analytics</a></dd>
+        <dd><a href="http://speakerdeck.com">Speaker Deck: Presentations</a></dd>
+        <dd><a href="https://gist.github.com">Gist: Code snippets</a></dd>
+        <dd><a href="http://jobs.github.com/">Job board</a></dd>
+      </dl>
+
+      <dl class="footer_nav">
+        <dt>Documentation</dt>
+        <dd><a href="http://help.github.com/">GitHub Help</a></dd>
+        <dd><a href="http://developer.github.com/">Developer API</a></dd>
+        <dd><a href="http://github.github.com/github-flavored-markdown/">GitHub Flavored Markdown</a></dd>
+        <dd><a href="http://pages.github.com/">GitHub Pages</a></dd>
+      </dl>
+
+      <dl class="footer_nav">
+        <dt>More</dt>
+        <dd><a href="http://training.github.com/">Training</a></dd>
+        <dd><a href="https://github.com/edu">Students &amp; teachers</a></dd>
+        <dd><a href="http://shop.github.com">The Shop</a></dd>
+        <dd><a href="/plans">Plans &amp; pricing</a></dd>
+        <dd><a href="http://octodex.github.com/">The Octodex</a></dd>
+      </dl>
+
+      <hr class="footer-divider">
+
+
+    <p class="right">&copy; 2013 <span title="0.12676s from fe2.rs.github.com">GitHub</span>, Inc. All rights reserved.</p>
+    <a class="left" href="https://github.com/">
+      <span class="mega-icon mega-icon-invertocat"></span>
+    </a>
+    <ul id="legal">
+        <li><a href="https://github.com/site/terms">Terms of Service</a></li>
+        <li><a href="https://github.com/site/privacy">Privacy</a></li>
+        <li><a href="https://github.com/security">Security</a></li>
+    </ul>
+
+  </div><!-- /.container -->
+
+</div><!-- /.#footer -->
+
+
+    <div class="fullscreen-overlay js-fullscreen-overlay" id="fullscreen_overlay">
+  <div class="fullscreen-container js-fullscreen-container">
+    <div class="textarea-wrap">
+      <textarea name="fullscreen-contents" id="fullscreen-contents" class="js-fullscreen-contents" placeholder="" data-suggester="fullscreen_suggester"></textarea>
+          <div class="suggester-container">
+              <div class="suggester fullscreen-suggester js-navigation-container" id="fullscreen_suggester"
+                 data-url="/AndreyMenezes/LAV2-2.0/suggestions/commit">
+              </div>
+          </div>
+    </div>
+  </div>
+  <div class="fullscreen-sidebar">
+    <a href="#" class="exit-fullscreen js-exit-fullscreen tooltipped leftwards" title="Exit Zen Mode">
+      <span class="mega-icon mega-icon-normalscreen"></span>
+    </a>
+    <a href="#" class="theme-switcher js-theme-switcher tooltipped leftwards"
+      title="Switch themes">
+      <span class="mini-icon mini-icon-brightness"></span>
+    </a>
+  </div>
+</div>
+
+
+
+    <div id="ajax-error-message" class="flash flash-error">
+      <span class="mini-icon mini-icon-exclamation"></span>
+      Something went wrong with that request. Please try again.
+      <a href="#" class="mini-icon mini-icon-remove-close ajax-error-dismiss"></a>
+    </div>
+
+    
+    
+    <span id='server_response_time' data-time='0.12727' data-host='fe2'></span>
+    
+  </body>
+</html>
+
