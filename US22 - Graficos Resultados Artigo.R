@@ -38,7 +38,7 @@ sessoes.mediana$matricula = reorder(sessoes.mediana$matricula, sessoes.mediana$t
 sessoes.mediana$rank = as.factor(seq(1, nrow(sessoes.mediana), 1))
 
 grafico.mediana <- ggplot(sessoes.mediana, aes(x=rank, y=(timeSession/3600), shape="Aluno")) + geom_point()+
-  theme_bw()+labs(x="Matrículas",y="Tamanho Mediano das Sessões (horas)")+ #ylim(c(0,1))+
+  theme_bw()+labs(x="Matrículas",y="Tamanho Típico das Sessões (horas)")+ #ylim(c(0,1))+
   scale_x_discrete(breaks =seq(from=0,to=100,by=10))+
   scale_y_continuous(breaks =seq(from=0,to=1,by=0.15))+
   theme(legend.justification=c(1,1), legend.position=c(1,1), legend.title=element_blank())
@@ -121,7 +121,7 @@ grafico2<- ggplot(df, aes(x=as.Date(data.hora),y=freq)) +
   scale_y_continuous(limits=c(0,150)) +
   theme_bw()+
   geom_segment(aes(x=as.Date(provas_data), y=0, xend=as.Date(provas_data), yend=140, linetype=Avaliacao), size=0.7)+
-  theme(legend.position = c(0.125, 0.82), legend.title = element_blank(),legend.text=element_text(size=8))
+  theme(legend.position = c(0.125, 0.79), legend.title = element_blank(),legend.text=element_text(size=8))
 
 png(filename = "Grafico_us7_totalSessoes.png", width = 550, height = 350)
 print(grafico)
