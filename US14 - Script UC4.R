@@ -23,10 +23,13 @@ tabela3 = tabela3[,c("matricula","ProporcaoSubCorretas")]
 tabela4 = tabela4[,c("matricula", "status")]
 
 uc4 = uc4[,-1]
+uc4$nota.final = (uc4$nota.teoria + uc4$nota.pratica + uc4$nota.listas + uc4$nota.provas)
 
 tabelaCompleta = merge(uc4,tabela1,by.x="matricula",by.y="matricula")
 tabelaCompleta = merge(tabelaCompleta,tabela2,by.x="matricula",by.y="matricula")
 tabelaCompleta = merge(tabelaCompleta,tabela3,by.x="matricula",by.y="matricula")
 tabelaCompleta = merge(tabelaCompleta,tabela4,by.x="matricula",by.y="matricula")
 
-write.csv(tabelaCompleta, "dados/tabelaUC4.csv")
+tabelaUC4 = tabelaCompleta[with(tabelaCompleta, order(nota.final, decreasing=T)),]
+
+write.csv(tabelaUC4, "dados/tabelaUC4.csv")
