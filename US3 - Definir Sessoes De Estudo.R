@@ -1,6 +1,7 @@
 # Codigo que cria 3 tabelas, tableSessionLength: com o as sessões e o tamanho delas, tableSumDiscipline: Tempo de estudo por aluno (soma das sessões)
 # e tableSumPerTest: tempo de estudo entre provas.
 # Andrey Menezes - versão 2.0 (Fevereiro 2013)
+require(Hmisc)
 
 dados = read.csv("dados/diferencaTimestamp.csv", stringsAsFactors=F)
 
@@ -42,20 +43,20 @@ tableSession = sessaoDeCadaSubmissao(dados, limiar)
 
 
 png("Ecdf.png",bg="white",width=700, height=400)
-par(mfrow=c(1,2))
-Ecdf(dados$diferenca/3600,q=(0.78),xlab = "Intervalo entre Submissões",
-ylab="Proporção <= x",label.curves=TRUE,col="blue",las=1, subtitles=FALSE,)
-Ecdf(dados$diferenca/3600,q=(0.78),xlab = "Intervalo entre Submissões",
-ylab="Proporção <= x",label.curves=TRUE,col="blue",las=1, subtitles=FALSE, xlim=c(0,48))
+  par(mfrow=c(1,2))
+  Ecdf(dados$diferenca/3600,q=(0.78),xlab = "Intervalo entre Submissões",
+  ylab="Proporção <= x",label.curves=TRUE,col="blue",las=1, subtitles=FALSE,)
+  Ecdf(dados$diferenca/3600,q=(0.78),xlab = "Intervalo entre Submissões",
+  ylab="Proporção <= x",label.curves=TRUE,col="blue",las=1, subtitles=FALSE, xlim=c(0,48))
 dev.off()
 
 
-pdf("Ecdf.pdf",bg="white",width=700/100, height=480/100)
-par(mfrow=c(1,2))
-Ecdf(dados$diferenca/3600,q=(0.78),xlab = "Intervalo entre Submissões",
-ylab="Proporção <= x",label.curves=TRUE,col="blue",las=1, subtitles=FALSE,)
-Ecdf(dados$diferenca/3600,q=(0.78),xlab = "Intervalo entre Submissões",
-ylab="Proporção <= x",label.curves=TRUE,col="blue",las=1, subtitles=FALSE, xlim=c(0,48))
+pdf("Ecdf.pdf",bg="white",width=700/100, height=400/100)
+  par(mfrow=c(1,2))
+  Ecdf(dados$diferenca/3600,q=(0.78),xlab = "Intervalo entre Submissões",
+  ylab="Proporção <= x",label.curves=TRUE,col="blue",las=1, subtitles=FALSE,)
+  Ecdf(dados$diferenca/3600,q=(0.78),xlab = "Intervalo entre Submissões",
+  ylab="Proporção <= x",label.curves=TRUE,col="blue",las=1, subtitles=FALSE, xlim=c(0,48))
 dev.off()
 
 
