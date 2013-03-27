@@ -40,6 +40,25 @@ sessaoDeCadaSubmissao = function(dados, limiar) {
 limiar = quantile(dados$diferenca, 0.78)
 tableSession = sessaoDeCadaSubmissao(dados, limiar)
 
+
+png("Ecdf.png",bg="white",width=700, height=400)
+par(mfrow=c(1,2))
+Ecdf(dados$diferenca/3600,q=(0.78),xlab = "Intervalo entre Submissões",
+ylab="Proporção <= x",label.curves=TRUE,col="blue",las=1, subtitles=FALSE,)
+Ecdf(dados$diferenca/3600,q=(0.78),xlab = "Intervalo entre Submissões",
+ylab="Proporção <= x",label.curves=TRUE,col="blue",las=1, subtitles=FALSE, xlim=c(0,48))
+dev.off()
+
+
+pdf("Ecdf.pdf",bg="white",width=700/100, height=480/100)
+par(mfrow=c(1,2))
+Ecdf(dados$diferenca/3600,q=(0.78),xlab = "Intervalo entre Submissões",
+ylab="Proporção <= x",label.curves=TRUE,col="blue",las=1, subtitles=FALSE,)
+Ecdf(dados$diferenca/3600,q=(0.78),xlab = "Intervalo entre Submissões",
+ylab="Proporção <= x",label.curves=TRUE,col="blue",las=1, subtitles=FALSE, xlim=c(0,48))
+dev.off()
+
+
 #Tabela com matricula, sess?o, tempo da sess?o, data da ultima submiss?o da sess?o
 colnames(tableSession) = c("matricula", "session", "timeSession", "lastSubmission", "amountSubmission")
 write.csv(tableSession, "dados/TableSessionLength.csv", row.names=F)
