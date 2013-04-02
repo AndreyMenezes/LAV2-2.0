@@ -5,9 +5,9 @@ require(nortest)
 require(ggplot2)
 
 #leitura dos dados.aula
-dados.aula.atividade.aula <- read.csv("AgrupamentoAtividadeEmAula.csv")
+dados.aula.atividade.aula <- read.csv("dados/AgrupamentoAtividadeEmAula.csv")
 dados.aula.atividade.aula <- dados.aula.atividade.aula[,-1] #remocao das colunas nao necessarias
-dados.aula.sessao.aula <- read.csv("tableSumDisciplineEmAula.csv")
+dados.aula.sessao.aula <- read.csv("dados/tableSumDisciplineEmAula.csv")
 
 #merge para associar para cada aluno seu tempo total de estudo e seu tempo de atividade.
 dados.aula <- merge(dados.aula.sessao.aula,dados.aula.atividade.aula,by.x="matricula",by.y="matricula")
@@ -56,9 +56,9 @@ max(dados.aula$atividade)
 #FORA HORARIO DE AULA#
 
 #leitura dos dados.fora
-dados.atividade.fora <- read.csv("AgrupamentoAtividadeForadeAula.csv")
+dados.atividade.fora <- read.csv("dados/AgrupamentoAtividadeForadeAula.csv")
 dados.atividade.fora <- dados.atividade.fora[,-1] #remocao das colunas nao necessarias
-dados.sessao.fora <- read.csv("tableSumDisciplineForadeAula.csv")
+dados.sessao.fora <- read.csv("dados/tableSumDisciplineForadeAula.csv")
 
 #merge para associar para cada aluno seu tempo total de estudo e seu tempo de atividade.
 dados.fora <- merge(dados.sessao.fora,dados.atividade.fora,by.x="matricula",by.y="matricula")
@@ -98,7 +98,6 @@ grafico2 <- ggplot(dados.fora,aes(sumSession,atividade)) +
  	     geom_point() + geom_smooth(method=lm,se=FALSE) + theme_bw() +
 	     scale_x_log10() + scale_y_log10(limits=c(0.01,1)) + 
 	     labs(x="Tempo Total de Estudo (log)",y="Atividade de Estudo (log)")
-	     #theme(panel.grid.minor.x=element_blank(), panel.grid.major.x=element_blank())
 
 png(filename = "ScatterplotUS6-ForaDeAula.png", width = 480, height = 480)
 print(grafico2)
