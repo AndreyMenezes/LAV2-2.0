@@ -62,7 +62,7 @@ tabela.class <- rbind(tabela1,tabela2,tabela3,tabela4,tabela5)
 
 
 dados2 <- merge(dados,tabela.class,by="comparador")
-dados2 <- dados2[,c(-1,-3,-9)]
+dados2 <- dados2[,c(-1,-9)]
 
 sub.aula <- subset(dados2,dados2$classe == "realizado em horario de aula")
 sub.fora <- subset(dados2,dados2$classe == "realizado fora do horario de aula")
