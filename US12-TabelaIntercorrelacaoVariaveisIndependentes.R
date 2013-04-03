@@ -3,7 +3,7 @@
 # Versao 1.1 - Iara Ribeiro (Adicionando o calculo para as variaveis na aula e fora de aula.)
 
 library(ggplot2)
-
+dir= "Data/12"
 tabela1 = read.csv("dados/TabelaParaPerfisEmAula.csv")
 tabela2 = read.csv("dados/TableSessionLengthEmAula.csv")
 tabela3 = read.csv("dados/submissoes_corretas_tempo_aula.csv")
@@ -81,7 +81,7 @@ dev.off()
 png(filename = paste(dir,"/Results/Images/MedianaProporcaoSubmissoesCorretasD.png",sep=""), width=240, height= 240 )
 print(ggplot(tabelaCompleta,aes(MedianaSessao, ProporcaoSubmissoesCorretas)) + 
     geom_point() + geom_smooth(method=lm,se=FALSE) + theme_bw() +
-    scale_x_log10() + scale_y_log10() + labs(x="Mediana Sessão(log)",y="Proporção de Submissões Corretas(log)"))
+    scale_x_log10() + scale_y_log10(limits=c(0.1,1)) + labs(x="Mediana Sessão(log)",y="Proporção de Submissões Corretas(log)"))
 dev.off()
 
 #8
@@ -106,7 +106,7 @@ dev.off()
 png(filename = paste(dir,"/Results/Images/NumeroExerciciosAtividadeD.png",sep=""), width=240, height= 240 )
 print(ggplot(tabelaCompleta,aes(NumeroExercicios, Atividade)) + 
     geom_point() + geom_smooth(method=lm,se=FALSE) + theme_bw() +
-    scale_x_log10() + scale_y_log10() + labs(x="Numero de Exercicios (log)",y="Atividade (log)"))
+    scale_x_log10(limits=c(1,1000)) + scale_y_log10(limits=c(0.1,1)) + labs(x="Numero de Exercicios (log)",y="Atividade (log)"))
 dev.off()
 
 #4
@@ -134,7 +134,7 @@ dev.off()
 png(filename = paste(dir,"/Results/Images/NumeroExerciciosProporcaoSubmissoesCorretasD.png",sep=""), width=240, height= 240 )
 print(ggplot(tabelaCompleta,aes(NumeroExercicios, ProporcaoSubmissoesCorretas)) + 
     geom_point() + geom_smooth(method=lm,se=FALSE) + theme_bw() +
-    scale_x_log10() + scale_y_log10() + labs(x="NumeroExercicios (log)",y="Proporção de Submissões Corretas(log)"))
+    scale_x_log10() + scale_y_log10(limits=c(0.1,1)) + labs(x="NumeroExercicios (log)",y="Proporção de Submissões Corretas(log)"))
 dev.off()
 
 #8
@@ -149,7 +149,7 @@ dev.off()
 png(filename = paste(dir,"/Results/Images/TempoTotalEstudoAtividadeD.png",sep=""), width=240, height= 240 )
 print(ggplot(tabelaCompleta,aes(TempoTotalEstudo, Atividade)) + 
     geom_point() + geom_smooth(method=lm,se=FALSE) + theme_bw() +
-    scale_x_log10() + scale_y_log10() + labs(x="Tempo Total de Estudo(log)",y="Atividade (log)"))
+    scale_x_log10(limits=c(0.1,100)) + scale_y_log10(limits=c(0.1,1)) + labs(x="Tempo Total de Estudo(log)",y="Atividade (log)"))
 dev.off()
 
 #4
@@ -194,35 +194,35 @@ dev.off()
 png(filename = paste(dir,"/Results/Images/AtividadeNumeroSessoesD.png",sep=""), width=240, height= 240 )
 print(ggplot(tabelaCompleta,aes(Atividade, NumeroSessoes)) + 
     geom_point() + geom_smooth(method=lm,se=FALSE) + theme_bw() +
-    scale_x_log10() + scale_y_log10() + labs(x="Atividade(log)",y="Número Sessoes(log)"))
+    scale_x_log10(limits=c(0.1,1)) + scale_y_log10(limits=c(1,100)) + labs(x="Atividade(log)",y="Número Sessoes(log)"))
 dev.off()
 
 #5
 png(filename = paste(dir,"/Results/Images/AtividadeTotalSubmissoesD.png",sep=""), width=240, height= 240 )
 print(ggplot(tabelaCompleta,aes(Atividade, TotalSubmissoes)) + 
     geom_point() + geom_smooth(method=lm,se=FALSE) + theme_bw() +
-    scale_x_log10() + scale_y_log10() + labs(x="Atividade (log)",y="Total de Submissões (log)"))
+    scale_x_log10(limits=c(0.1,1)) + scale_y_log10(limits=c(1,1000)) + labs(x="Atividade (log)",y="Total de Submissões (log)"))
 dev.off()
 
 #6
 png(filename = paste(dir,"/Results/Images/AtividadeSubmissoesCorretasD.png",sep=""), width=240, height= 240 )
 print(ggplot(tabelaCompleta,aes(Atividade, SubmissoesCorretas)) + 
     geom_point() + geom_smooth(method=lm,se=FALSE) + theme_bw() +
-    scale_x_log10() + scale_y_log10() + labs(x="Atividade (log)",y="Número de Submissões Corretas(log)"))
+    scale_x_log10(limits=c(0.1,1)) + scale_y_log10(limits=c(1,100)) + labs(x="Atividade (log)",y="Número de Submissões Corretas(log)"))
 dev.off()
 
 #7
 png(filename = paste(dir,"/Results/Images/AtividadeProporcaoSubmissoesCorretasD.png",sep=""), width=240, height= 240 )
 print(ggplot(tabelaCompleta,aes(Atividade, ProporcaoSubmissoesCorretas)) + 
     geom_point() + geom_smooth(method=lm,se=FALSE) + theme_bw() +
-    scale_x_log10() + scale_y_log10() + labs(x="Atividade (log)",y="Proporção de Submissões Corretas(log)"))
+    scale_x_log10(limits=c(0.1,1)) + scale_y_log10(limits=c(0.1,1)) + labs(x="Atividade (log)",y="Proporção de Submissões Corretas(log)"))
 dev.off()
 
 #8
 png(filename = paste(dir,"/Results/Images/AtividadeNotaFinalD.png",sep=""), width=240, height= 240 )
 print(ggplot(tabelaCompleta,aes(Atividade, NotaFinal)) + 
     geom_point() + geom_smooth(method=lm,se=FALSE) + theme_bw() +
-    scale_x_log10() + scale_y_log10() + labs(x="Atividade (log)",y="Nota Final (log)"))
+    scale_x_log10(limits=c(0.1,1)) + scale_y_log10(limits=c(0.1,10)) + labs(x="Atividade (log)",y="Nota Final (log)"))
 dev.off()
 
 
